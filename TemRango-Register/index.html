@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script defer src="script/script.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body class="body">
+
+    <div class="logo">
+        <div class="logo__background">
+            <img src="assets/sorriso.svg" alt="" class="logo__img">
+        </div>
+    </div>
+
+    <header class="header">
+
+        <h3 class="header__text">ETAPA 1 de 5</h3>
+        <h2 class="header__title">Dados de acesso</h2>
+
+    </header>
+
+    <div class="acess">
+
+        <div class="acess__input">
+            <h3 class="input__title">Informe um e-mail para acesso *</h3>
+            <input type="email" placeholder="ex: restjoaodebarro@gmail.com" class="input input__spacing">
+            <div class="input__error"></div>
+            <div class="input__checked"></div>
+            <h3 class="error">Digite um e-mail válido!</h3>
+        </div>
+
+        <div class="acess__input">
+            <h3 class="input__title">Crie uma senha para acesso *</h3>
+            <input type="password" placeholder="Com pelo menos 6 caracteres" class="input input__spacing">
+            <div class="input__password"></div>
+            <div class="input__error"></div>
+            <h3 class="error">A senha precisa ter pelo menos 6 caracteres!</h3>
+        </div>
+
+        <div class="acess__obs">
+            <h3 class="obs__text">Ao continuar aceito os <a href="terms.html" target="_blank">Termos e as políticas</a> da plataforma Tem Rango, assim como concordo, ao final desse processo enviar comprovantes de endereço e documentos do responsável.</h3>
+        </div>
+
+    </div>
+
+    <div class="company">
+
+        <div class="acess__input">
+            <h3 class="input__title">Informe um CPF ou CNPJ *</h3>
+            <input type="number" onkeypress="return somenteNumeros(event)" placeholder="Digite apenas números" class="input input__spacing focus" maxlength="11">
+            <h3 class="error">Digite um número válido de CPF/CNPJ</h3>
+        </div>
+
+        <div class="acess__input">
+            <h3 class="input__title">Nome da sua empresa *</h3>
+            <input type="text" placeholder="ex: Tem Rango" class="input input__spacing focus">
+        </div>
+
+        <h3 class="input__title">Tipo de negócio *</h3>
+        <div class="topnav input__spacing">
+            <div class="active-select select-on" hidden>Selecione</div>
+            <div class="myLinks  select-on" style="display:none">
+                <a class="select-on test">Restaurantes</a>
+                <a class="select-on test">Mercados</a>
+                <a class="select-on test">Petshops</a>
+                <a class="select-on test">Bebidas</a>
+            </div>
+        </div>
+
+        <div class="input__categories">
+            <h3 class="input__title">Categoria do negócio *</h3>
+            <div class="topnav input__spacing">
+                <div class="active-select select-on" hidden>Selecione</div>
+                <div class="myLinks  select-on" style="display:none">
+                    <a class="select-on test">Restaurantes</a>
+                    <a class="select-on test">Marmitarias</a>
+                    <a class="select-on test">Churrascarias</a>
+                    <a class="select-on test">Pastelarias</a>
+                    <a class="select-on test">Hamburguerias</a>
+                    <a class="select-on test">Pizzarias</a>
+                    <a class="select-on test">Padarias</a>
+                    <a class="select-on test">Cafeterias</a>
+                    <a class="select-on test">Saudáveis</a>
+                    <a class="select-on test">Espetinhos</a>
+                    <a class="select-on test">Sorvetes & Assaí</a>
+                    <a class="select-on test">Doces & Sobremesas</a>
+                    <a class="select-on test">Salgados</a>
+                    <a class="select-on test">Festas</a>
+                    <a class="select-on test">Vegano</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="input__categories">
+            <h3 class="input__title">Subcategoria do negócio *</h3>
+            <div class="topnav input__spacing">
+                <div class="active-select select-on" hidden>Selecione</div>
+                <div class="myLinks  select-on" style="display:none">
+                    <a class="select-on test">Express</a>
+                    <a class="select-on test">Conveniências</a>
+                    <a class="select-on test">Feirinhas</a>
+                    <a class="select-on test">Mercadinhos</a>
+                    <a class="select-on test">Supermercados</a>
+                    <a class="select-on test">Atacado</a>
+                    <a class="select-on test">Carnes & Peixes</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="andress">
+
+        <div class="andress__CEP">
+
+            <h2 class="input__title">CEP *</h2>
+
+            <div class="CEP__content">
+                <input type="number" placeholder="ex: 62700-000" onkeypress="return somenteNumeros(event)" class="input CEP__input focus">
+                <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">
+                    <h3 class="CEP__text">Não sei meu cep</h3>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="andress__state">
+
+            <h2 class="input__title">Estado *</h2>
+
+            <div class="topnav  input__spacing">
+                <div class="active-select select-on" hidden>Selecione</div>
+                <div class="myLinks  select-on" style="display:none">
+                    <a class="select-on test">Acre</a>
+                    <a class="select-on test">Alagoas</a>
+                    <a class="select-on test">Amapá</a>
+                    <a class="select-on test">Amazonas</a>
+                    <a class="select-on test">Bahia</a>
+                    <a class="select-on test">Ceará</a>
+                    <a class="select-on test">Distrito Federal</a>
+                    <a class="select-on test">Espírito Santo</a>
+                    <a class="select-on test">Goiás</a>
+                    <a class="select-on test">Maranhão</a>
+                    <a class="select-on test">Mato Grosso</a>
+                    <a class="select-on test">Mato Grosso do Sul</a>
+                    <a class="select-on test">Minas Gerais</a>
+                    <a class="select-on test">Pará</a>
+                    <a class="select-on test">Paraíba</a>
+                    <a class="select-on test">Paraná</a>
+                    <a class="select-on test">Pernambuco</a>
+                    <a class="select-on test">Piauí</a>
+                    <a class="select-on test">Rio de Janeiro</a>
+                    <a class="select-on test">Rio Grande do Norte</a>
+                    <a class="select-on test">Rio Grande do Sul</a>
+                    <a class="select-on test">Rondônia</a>
+                    <a class="select-on test">Roraima</a>
+                    <a class="select-on test">Santa Catarina</a>
+                    <a class="select-on test">São Paulo</a>
+                    <a class="select-on test">Sergipe</a>
+                    <a class="select-on test">Tocantins</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="andress__city">
+
+            <h2 class="input__title">Cidade *</h2>
+
+            <div class="topnav input__spacing">
+                <div class="active-select select-on" hidden>Selecione</div>
+                <div class="myLinks  select-on" style="display:none">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="andress__place">
+
+            <h2 class="input__title">Logradouro *</h2>
+            <input type="text" placeholder="ex: Rua Paulino Barroso" class="input input__spacing focus">
+
+        </div>
+
+        <div class="andress__number">
+
+            <div class="number__item-1">
+
+                <h2 class="input__title">Número</h2>
+                <input type="number" placeholder="ex: 7" onkeypress="return somenteNumeros(event)" class="input input__spacing focus">
+
+            </div>
+
+            <div class="number__item-2">
+
+                <h2 class="input__title">Complemento</h2>
+                <input type="text" placeholder="ex: altos" class="input input__spacing focus">
+
+            </div>
+
+        </div>
+
+        <div class="andress__district">
+
+            <h2 class="input__title">Bairro *</h2>
+            <input type="text" placeholder="ex: Centro" class="input input__spacing focus">
+
+        </div>
+
+    </div>
+
+    <div class="responsible">
+
+        <div class="responsible__name">
+
+            <h2 class="input__title">Nome completo *</h2>
+            <input type="text" placeholder="ex: João Dias" class="input input__spacing focus">
+
+        </div>
+
+        <div class="responsible__identity">
+
+            <div class="CPF">
+                <h2 class="input__title">CPF *</h2>
+                <input type="number" placeholder="Apenas números" onkeypress="return somenteNumeros(event)" class="input input__spacing focus id">
+            </div>
+
+            <div class="RG">
+                <h2 class="input__title">RG (identidade) *</h2>
+                <input type="number" placeholder="Apenas números" onkeypress="return somenteNumeros(event)" class="input input__spacing focus id">
+            </div>
+
+        </div>
+
+        <div class="responsible__tel">
+            <h2 class="input__title">Telefone com DDD *</h2>
+            <input type="number" placeholder="ex: (85) 9 9727-7128" onkeypress="return somenteNumeros(event)" class="input input__spacing focus">
+        </div>
+
+        <div class="responsible__email">
+            <h2 class="input__title">E-mail de contato *</h2>
+            <input type="text" placeholder="ex: maria.d@gmail.com" class="input input__spacing focus">
+        </div>
+
+    </div>
+
+    <div class="resume">
+
+        <div class="resume__info-box">
+
+            <div class="info__plan">
+
+                <div class="info__img-box">
+                    <img src="assets/doc.svg" alt="" class="info__img">
+                </div>
+
+                <div class="info__content">
+
+                    <div class="info__titles">
+                        <h3 class="info__title">Plano </h3>
+                        <h3 class="info__title info__title--emphasis"> Startup</h3>
+                    </div>
+
+                    <h3 class="info__text">A cobrança é mensal e automática</h3>
+
+                </div>
+
+            </div>
+
+            <div class="info__limits">
+
+                <div class="info__img-box">
+                    <img src="assets/box.svg" alt="" class="info__img">
+                </div>
+                <div class="info__content">
+                    <h3 class="info__title">Até 100 itens cadastrados</h3>
+                    <h3 class="info__text">Trocas ilimitadas</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h3 class="resume__header__title">Pagamento</h3>
+
+        <div class="resume__card-number">
+
+            <h2 class="input__title">Número do cartão *</h2>
+            <input input type="text" placeholder="ex: 0000 0000 0000 0000" inputmode="numeric" class="input input__spacing focus" maxlength="19">
+
+        </div>
+
+        <div class="resume__card-infos">
+
+            <div class="expiring">
+
+                <h2 class="input__title">Validade *</h2>
+
+                <div class="expiring__inputs">
+                    <input type="number" placeholder="dia" onkeypress="return somenteNumeros(event)" class="input input__spacing input--left focus">
+                    <div class="border"></div>
+                    <input type="number" placeholder="mês" onkeypress="return somenteNumeros(event)" class="input input__spacing input--right focus">
+                </div>
+
+
+            </div>
+
+            <div class="CVV">
+
+                <div class="CVV__content">
+
+                    <h2 class="input__title">CVV *</h2>
+
+                    <div class="tooltip">
+                        <div class="tooltip-box">
+                            <div class="tooltip__text">Geralmente são 3 número que ficam na parte detrás do cartão</div>
+                        </div>
+                        <div class="tooltip-triangle"></div>
+                        <img src="assets/interrogacao.svg" alt="" class="CVV__tooltip">
+                    </div>
+
+
+                </div>
+
+                <input type="number" placeholder="ex: 123" onkeypress="return somenteNumeros(event)" class="input input__spacing focus">
+
+            </div>
+
+        </div>
+
+        <div class="resume__card-name">
+
+            <h2 class="input__title">Nome como está no cartão *</h2>
+            <input type="text" placeholder="ex: joão da silva" class="input input__spacing focus">
+
+        </div>
+
+        <div class="resume__card-CPF">
+
+            <div class="card-CPF__content">
+                <h2 class="input__title">CPF ou CNPJ do titular *</h2>
+                <div class="tooltip">
+                    <div class="tooltip-box tooltip--short">
+                        <div class="tooltip__text">No Brasil é obrigatório coletar o número de CPF e ou CNPJ do titular do cartão.</div>
+                    </div>
+                    <div class="tooltip-triangle"></div>
+                    <img src="assets/interrogacao.svg" alt="" class="CVV__tooltip">
+                </div>
+            </div>
+
+            <input type="number" placeholder=" 123.456.789-10" onkeypress="return somenteNumeros(event)" class="input input__spacing focus">
+
+        </div>
+
+    </div>
+
+    <div class="finish">
+
+        <h3 class="finish__text">Contrato:# 021457</h3>
+        <h3 class="finish__text--1">Detalhes da compra enviado para</h3>
+        <h3 class="finish__text--2">restaurantejoaodebarro@gmail.com</h3>
+
+        <div class="check-box">
+            <div class="check-box__background">
+                <img src="assets/check.svg" alt="" class="check__img">
+                <h3 class="check__text">pagamento <br> realizado</h3>
+            </div>
+        </div>
+
+        <div class="loading-box">
+            <div class="loading">
+                <div class="loading load"></div>
+            </div>
+
+        </div>
+
+        <h3 class="finish__text---3">Aguarde, estamos lhe <br> redirecionado para a área de <br> login ou <a href="">clique aqui</a></h3>
+
+    </div>
+
+    <div class="next-button">
+        <div class="back">
+            <h3 class="back__text">voltar</h3>
+        </div>
+        <button class="next">
+			<img src="assets/disquete.svg" alt="" class="next__img">
+			<img src="assets/contrato.svg" alt="" class="next__img img__2">
+			<img src="assets/contratob.svg" alt="" class="next__img img__3">
+
+			<h3 class="next__text">Próximo</h3>
+		</button>
+    </div>
+
+</body>
+
+</html>
