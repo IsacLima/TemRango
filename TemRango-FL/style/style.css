@@ -1,0 +1,689 @@
+ * {
+     margin: 0;
+     padding: 0;
+     font-family: 'Quicksand', sans-serif;
+ }
+ 
+ body {
+     min-width: 360px;
+ }
+ 
+ .container {
+     width: 100%;
+     height: auto;
+     display: grid;
+     grid-template-areas: 'main' 'bg';
+     background-color: #EFFBF7;
+ }
+ 
+ main {
+     width: 90%;
+     grid-area: main;
+     display: flex;
+     flex-direction: column;
+     justify-self: center;
+ }
+ 
+ .logo {
+     padding-top: 26.46px;
+     width: 100%;
+     height: 142.54px;
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+ }
+ 
+ p {
+     font-family: 'Roboto', sans-serif;
+ }
+ 
+ .wait {
+     font-size: 24px;
+     font-weight: 400;
+     letter-spacing: 0.4px;
+     height: 34px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+ }
+ 
+ .wait p,
+ .black,
+ .contact h3 {
+     color: #373938;
+ }
+ 
+ .coming {
+     height: 174px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+ }
+ 
+ .black,
+ .green {
+     font-size: 65px;
+     letter-spacing: 0.95px;
+ }
+ 
+ .black {
+     height: 40%;
+ }
+ 
+ .green {
+     color: #05CB95;
+     height: 40%;
+ }
+ 
+ .description {
+     color: #757575;
+     font-size: 16px;
+     line-height: 20px;
+     width: 100%;
+     letter-spacing: 0.2px;
+     font-weight: 400;
+     height: 148px;
+     display: flex;
+     align-items: flex-start;
+ }
+ 
+ .contact {
+     height: 112px;
+     display: flex;
+     flex-direction: column;
+     justify-content: end;
+ }
+ 
+ .contact h3 {
+     font-size: 22px;
+     width: 100%;
+     margin-bottom: 10px;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 500;
+     letter-spacing: 0.22px;
+ }
+ 
+ .contact-input {
+     background-color: #FFFFFF;
+     width: 333px;
+     height: 75px;
+     border-radius: 50px;
+     box-shadow: 0px 3px 25px #00000029;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ textarea:focus,
+ input:focus {
+     box-shadow: 0 0 0 0;
+     outline: 0;
+ }
+ 
+ .contact-email {
+     width: 80%;
+ }
+ 
+ .contact-email:hover {
+     color: #05CB95;
+ }
+ 
+ .contact-email,
+ .send-pc {
+     height: 100%;
+     border-radius: 50px;
+ }
+ 
+ input {
+     border: none;
+     font-size: 18px;
+     padding-left: 25px;
+     font-family: 'Roboto', sans serif;
+     font-weight: 400;
+ }
+ 
+ .send {
+     width: 52px;
+     height: 52px;
+     border-radius: 50%;
+     background-color: #CCD8D5;
+     border: none;
+     margin-right: 1.29vh;
+     font-size: 18px;
+     color: #738B85;
+     font-weight: 500;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .send-pc {
+     display: none;
+ }
+ 
+ .checkbox {
+     display: flex;
+     flex-direction: column;
+     padding-top: 29px;
+     height: 135px;
+ }
+ 
+ .item-checkbox {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+ }
+ 
+ .check {
+     position: absolute;
+     z-index: -1;
+     opacity: 0;
+ }
+ 
+ .check+label {
+     position: relative;
+     cursor: pointer;
+     padding-left: 17px;
+ }
+ 
+ input[type=checkbox]+label::before {
+     content: "";
+     position: absolute;
+     width: 21px;
+     height: 21px;
+     left: -3vh;
+     border: solid 2px #AAAAAA;
+     border-radius: 6px;
+ }
+ 
+ input[type=checkbox]:checked+label::after {
+     content: url('https://api.iconify.design/jam/check.svg?color=white&width=28&height=28');
+     position: absolute;
+     left: -3vh;
+     width: 25px;
+     height: 25px;
+     background-color: #05CB95;
+     border: none;
+     border-radius: 6px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ input[type=checkbox]+.check-hover {
+     color: #AAAAAA;
+ }
+ 
+ input[type=checkbox]:checked+.check-hover {
+     color: #373938;
+ }
+ 
+ .box-1::after,
+ .box-1::before {
+     bottom: 40%;
+ }
+ 
+ .box-2::after,
+ .box-2::before {
+     bottom: 15%;
+ }
+ 
+ .label-text {
+     font-size: 13px;
+     font-family: 'Roboto', sans sans-serif;
+     margin-left: 10%;
+     margin-top: 0.5vh;
+     margin-bottom: 1.25vh;
+ }
+ 
+ footer h4 {
+     font-size: 16px;
+     font-family: 'Roboto', sans sans-serif;
+     color: #373938;
+     font-weight: 400;
+     padding-bottom: 14px;
+ }
+ 
+ footer {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     width: 100%;
+ }
+ 
+ .sociais {
+     display: flex;
+     flex-direction: column;
+     width: 62.5%;
+     height: 101px;
+ }
+ 
+ .icons {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 75%;
+ }
+ 
+ .icon {
+     width: 20px;
+     height: 20px;
+ }
+ 
+ .icon-facebook {
+     width: 11px;
+     height: 20px;
+ }
+ 
+ .contour,
+ .contour-email {
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     background-color: #FFFFFF;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0px 3px 25px #00000029;
+     cursor: pointer;
+ }
+ 
+ .send-email {
+     width: 100%;
+     height: 155px;
+ }
+ 
+ .send-email p {
+     font-size: 22px;
+     color: #05CB95;
+     padding-left: 10px;
+ }
+ 
+ .email {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+ }
+ 
+ .static-bg {
+     grid-area: bg;
+     z-index: 0;
+ }
+ 
+ .bg-pc {
+     width: 100%;
+ }
+ 
+ .contour-whatsapp {
+     z-index: 1;
+     position: fixed;
+     bottom: 50px;
+     left: 74%;
+     background-color: #FFFFFF;
+     border-radius: 50%;
+     width: 75px;
+     height: 75px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     box-shadow: 0px 3px 25px #0000006b;
+ }
+
+.whatsapp-2{
+	display: none;
+}
+
+ .contour-whatsapp .bg-whats {
+     position: fixed;
+ }
+
+.contour-whatsapp a {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+ .info {
+     visibility: hidden;
+ }
+ 
+ @media(min-width: 412px) {
+     .contour-whatsapp {
+         left: 78%;
+     }
+     .box-1::after,
+     .box-1::before,
+     .box-2::after,
+     .box-2::before {
+         bottom: 10%;
+     }
+ }
+ 
+ @media(min-width: 768px) {
+     .wait,
+     .coming {
+         align-items: center;
+     }
+     .description {
+         justify-content: center;
+         align-items: center;
+     }
+     .contact {
+         justify-content: end;
+     }
+     .contact-input {
+         height: 90px;
+         width: 100%;
+     }
+     .contact h3 {
+         margin-top: 0;
+     }
+     .contact-email:hover {
+         color: #05CB95;
+     }
+     .checkbox {
+         margin-bottom: 39px;
+     }
+     .icons {
+         width: 40%;
+     }
+     .label-text {
+         font-size: 16px;
+     }
+     .box-1::before,
+     .box-1::after,
+     .box-2::before,
+     .box-2::after {
+         bottom: 19%;
+     }
+     .contour-whatsapp {
+         left: 82%;
+     }
+ }
+ 
+ @media (orientation: landscape) {
+     .container {
+         grid-template-areas: 'main bg';
+         grid-template-columns: 1fr 1fr;
+     }
+     main {
+         justify-self: flex-end;
+         width: 98%;
+     }
+     .logo {
+         justify-content: start;
+         align-items: flex-start;
+         height: 142px;
+     }
+     .wait,
+     .coming {
+         align-items: start;
+     }
+     .description {
+         width: 100%;
+     }
+     .description p {
+         width: 80%;
+     }
+     .contact {
+         justify-content: end;
+     }
+     .contact-input {
+         width: 300px;
+     }
+     .label-text {
+         font-size: 13px;
+         width: 80%;
+         margin-left: 16px;
+     }
+     .check+label {
+         padding-left: 30px;
+     }
+     .box-1::after,
+     .box-1::before,
+     .box-2::after,
+     .box-2::before {
+         bottom: 34%;
+     }
+     .icons {
+         width: 70%;
+     }
+     .send-email {
+         height: 101px;
+     }
+     .static-bg {
+         height: 100%;
+         overflow: hidden;
+     }
+     .bg-pc {
+         display: block;
+         width: 180%;
+         height: 100%;
+         overflow: hidden;
+     }
+     .contour-whatsapp {
+         left: 85%;
+     }
+ }
+ 
+ @media(min-width: 1025px) {
+     .container {
+         grid-template-areas: 'main bg';
+         grid-template-columns: 1fr 1fr;
+     }
+     main {
+         justify-self: flex-end;
+         width: 76.5%;
+     }
+     .logo {
+         padding-top: 4.5%;
+         height: 142px;
+         justify-content: start;
+         align-items: flex-start;
+     }
+     .wait {
+         align-items: start;
+         font-size: 24px;
+     }
+     .coming {
+         align-items: start;
+         height: 236px;
+     }
+     .black,
+     .green {
+         font-size: 95px;
+     }
+     .description {
+         font-size: 20px;
+         width: 82.5%;
+         line-height: 30px;
+         height: 140px;
+     }
+     .description p {
+         width: 95%;
+     }
+     .contact {
+         height: 152px;
+         padding-bottom: 10px;
+     }
+     .contact h3 {
+         font-size: 22px;
+     }
+     .contact-input {
+         width: 477px;
+         height: 75px;
+     }
+     .contact-email {
+         width: 60%;
+     }
+     .contact-email,
+     .send-pc {
+         font-size: 18px;
+     }
+     .contact-email:hover {
+         color: #05CB95;
+     }
+     .send-pc:hover {
+         color: #FFFFFF;
+         background-color: #05CB95;
+     }
+     .send {
+         width: 121px;
+         height: 52px;
+         border-radius: 30px;
+     }
+     .send-pc {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         height: 100%;
+     }
+     .send-mobile {
+         display: none;
+     }
+     .checkbox {
+         height: 100px;
+         padding: 10px;
+     }
+     .item-checkbox {
+         align-items: start;
+         width: 85%;
+     }
+     input[type=checkbox]+label::before {
+         width: 21px;
+         height: 21px;
+         bottom: 1vh;
+         border-radius: 8px;
+     }
+     input[type=checkbox]:checked+label::after {
+         bottom: 1vh;
+         width: 25px;
+         height: 25px;
+         border-radius: 8px;
+     }
+     input[type=checkbox]+.check-hover {
+         color: #AAAAAA;
+     }
+     input[type=checkbox]:checked+.check-hover {
+         color: #373938;
+     }
+     .label-text,
+     footer h4 {
+         font-size: 16px;
+     }
+     .label-text {
+         margin-left: 17px;
+         padding-top: 19px;
+         width: 90%;
+     }
+     .box-1 {
+         padding-top: 0;
+     }
+     .box-2 {
+         padding-top: 5px;
+     }
+     footer {
+         flex-direction: row;
+         align-items: center;
+         justify-content: start;
+         height: 163px;
+     }
+     footer h4 {
+         margin: 0;
+         margin-bottom: 15px;
+     }
+     .sociais {
+         width: 35%;
+     }
+     .icons {
+         width: 88%;
+     }
+     .send-email {
+         width: 65%;
+         margin-bottom: 0;
+     }
+     .sociais,
+     .send-email {
+         margin: 0;
+     }
+     .send-email p {
+         font-size: 22px;
+     }
+     .static-bg {
+         height: 1080px;
+         overflow: hidden;
+     }
+     .bg-pc {
+         display: block;
+         width: 960px;
+         height: 100%;
+         overflow: hidden;
+     }
+     .contour-whatsapp .bg-whats {
+         position: fixed;
+         width: 34.16px;
+         height: 34.16px;
+     }
+     .contour-whatsapp {
+         z-index: 1;
+         position: fixed;
+         left: 90%;
+         background-color: #FFFFFF;
+         border-radius: 50%;
+         width: 90px;
+         height: 90px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         cursor: pointer;
+     }
+     .info::after {
+         visibility: hidden;
+         content: "";
+         width: 0;
+         height: 0;
+         position: absolute;
+         border-left: 10px solid transparent;
+         border-right: 10px solid transparent;
+         border-top: 15px solid #373938;
+         bottom: 105%;
+         left: 37.5%;
+     }
+     .info-text {
+         background-color: #373938;
+         color: #FFFFFF;
+         font-family: 'Roboto', sans-serif;
+         font-size: 16px;
+         font-weight: 300;
+         border-radius: 8px;
+         z-index: 1;
+         position: absolute;
+         visibility: hidden;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     .contour-whatsapp:hover .info-text {
+         visibility: visible;
+         top: -88%;
+         left: -70.5%;
+         width: 196px;
+         height: 62px;
+     }
+     .contour-whatsapp:hover .info::after {
+         visibility: visible;
+     }
+ }
+ 
+ @media(min-width: 1920px) {
+     main {
+         width: 61.5%;
+     }
+     .send-email p {
+         padding-left: 10px;
+     }
+ }

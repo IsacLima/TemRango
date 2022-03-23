@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tem Rango</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+		<link rel="shortcut icon" type="imagex/png" href="/assets/favicon.svg">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <main>
+
+            <div class="logo">
+                <img src="assets/img/logo-temrango.svg" alt="logo-TemRango" class="logo-img">
+            </div>
+
+            <div class="wait">
+                <p>Aguarde... <img src="assets/icons/coracao.svg" alt="coração"> <img src="assets/icons/coracao.svg" alt="coração"></p>
+            </div>
+
+            <div class="coming">
+                <h1 class="black">Estamos</h1>
+                <h1 class="green">chegando</h1>
+            </div>
+
+            <div class="description">
+                <p>O melhor aplicativo para delivery de comida está saindo do forno. Vamos aumentar suas vendas, entregar mais comodidade para seus clientes e tornar seu negócio ainda mais relevante.</p>
+            </div>
+
+            <form id="form">
+                <div class="contact">
+                    <h3>Quero entrar na lista de espera</h3>
+                    <div class="contact-input">
+                        <input id="email" class="contact-email" type="email" placeholder="Digite seu e-mail">
+                        <button class="send" type="submit">
+							<p class="send-pc">enviar</p><img class="send-mobile" src="assets/icons/enviar.svg"
+								alt="send">
+						</button>
+                    </div>
+                </div>
+
+                <div class="checkbox">
+                    <div class="item-checkbox">
+                        <input class="check check-hover" type="checkbox" name="discounts" id="discounts" checked>
+                        <label class="label-text check-hover box-1" for="discounts">Quero entrar na lista de espera do
+							Tem
+							Rango e ganhar desconto de 50% nos valores dos planos.</label>
+                    </div>
+
+                    <div class="item-checkbox">
+                        <input class="check check-hover" type="checkbox" name="offers" id="offers" checked>
+                        <label class="label-text check-hover box-2" for="offers">Autorizo o envio de ofertas, promoções
+							e
+							tudo relativo ao lançamento e ações do Tem Rango.</label>
+                    </div>
+                </div>
+            </form>
+            <footer>
+
+                <div class="sociais">
+                    <h4>Redes sociais</h4>
+                    <div class="icons">
+                        <div class="contour">
+                            <a href="https://www.facebook.com/temrango.brasil" target="_blank">
+                                <img class="icon-facebook" src="assets/icons/facebook.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="contour">
+                            <a href="https://www.instagram.com/temrangobrasil" target="_blank">
+                                <img class="icon" src="assets/icons/instagram.svg" alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="contour">
+                            <a href="https://twitter.com/TemRango" target="_blank">
+                                <img class="icon" src="assets/icons/linkedin.svg" alt="Linkedln">
+                            </a>
+                        </div>
+                        <div class="contour whatsapp-2">
+                            <a href="https://wa.me/5585997277128?text=Olá, gostaria de saber mais sobre o Tem Rango e seus planos e preços. Obrigado." target="_blank">
+                                <img class="icon" src="assets/icons/whatsapp.svg" alt="whatsapp">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="send-email">
+                    <h4>Mande um e-mail para nós</h4>
+                    <div class="email">
+                        <div class="contour-email">
+                            <img src="assets/icons/email.svg" alt="email">
+                        </div>
+                        <p>temrango@gmail.com</p>
+                    </div>
+                </div>
+
+            </footer>
+
+        </main>
+
+        <div class="static-bg">
+            <img src="assets/img/imagem-background.png" alt="bg" class="bg-pc">
+            <div class="contour-whatsapp">
+                <a href="https://wa.me/85997277128?text=Olá, gostaria de saber mais sobre o Tem Rango e seus planos e preços. Obrigado." target="_blank">
+                    <img class="bg-whats" src="assets/icons/whatsapp.svg" alt="whatsapp">
+                </a>
+                <div class="info">
+                    <h2 class="info-text">Chama no whatsapp</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+        document.addEventListener('submit', function(event) {
+
+            event.preventDefault();
+
+            var lead = {
+                "email": document.getElementById("email").value,
+                "waitingList": document.getElementById("discounts").checked,
+                "offer": document.getElementById("offers").checked
+            }
+
+
+            fetch('https://m7snicqdng.execute-api.us-east-1.amazonaws.com/default/JavaFunction', {
+                method: 'POST',
+                body: JSON.stringify(lead),
+
+            }).then(function(response) {
+
+                if (response.ok) {
+                    Toastify({
+                        text: "Cadastro realizado com sucesso",
+                        duration: 3000,
+                        destination: "https://github.com/apvarun/toastify-js",
+                        newWindow: true,
+                        close: true,
+                        gravity: "top", // `top` or `bottom`
+                        position: "center", // `left`, `center` or `right`
+                        stopOnFocus: true, // Prevents dismissing of toast on hover
+                        onClick: function() {} // Callback after click
+                    }).showToast();
+
+
+                    document.getElementById("email").value = ""
+                    document.getElementById("discounts").checked = true
+                    document.getElementById("offers").checked = true
+
+                    return response.json();
+                }
+
+                return response.json().then(data => ({
+                    data: data,
+                    status: response.status
+                }));
+
+            }).then(function(response) {
+
+                if (response.status == 400) {
+
+                    if (response.data.code === 'LEAD_ERROR_02') {
+                        response.data.description = 'Por favor, digite seu email :)'
+                    }
+
+
+                    if (response.data.code === 'LEAD_ERROR_03') {
+                        response.data.description = 'Por favor, digite um email válido :('
+                    }
+
+
+                    Toastify({
+                        text: response.data.description,
+                        duration: 3000,
+                        destination: "https://github.com/apvarun/toastify-js",
+                        newWindow: true,
+                        close: true,
+                        gravity: "top", // `top` or `bottom`
+                        position: "center", // `left`, `center` or `right`
+                        stopOnFocus: true, // Prevents dismissing of toast on hover
+                        style: {
+                            background: "linear-gradient(to right, red, pink)",
+                        },
+                        onClick: function() {} // Callback after click
+                    }).showToast();
+
+                }
+
+
+            }).catch(function(error) {
+
+                Toastify({
+                    text: "Erro ao realizar cadastro",
+                    duration: 3000,
+                    destination: "https://github.com/apvarun/toastify-js",
+                    newWindow: true,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                        background: "linear-gradient(to right, red, pink)",
+                    },
+                    onClick: function() {} // Callback after click
+                }).showToast();
+
+                document.getElementById("email").value = ""
+                document.getElementById("discounts").checked = true
+                document.getElementById("offers").checked = true
+
+            });
+        });
+    </script>
+</body>
+
+
+</html>
