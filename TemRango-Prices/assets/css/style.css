@@ -302,7 +302,7 @@ main{
 
 .infos__content{
     height: 52px;
-    width: 156px;
+    width: 154px;
     margin-right: 10px;
     border-radius: 7px;
     border: 1px solid #373938;
@@ -399,7 +399,10 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
-
+a{
+    height: 19px;
+    width: 19px;
+}
 .sociais__icon{
     height: 19px;
     width: 19px;
