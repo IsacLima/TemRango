@@ -239,6 +239,7 @@ main{
 
 .resources{
     margin: 0 0 115px;
+    display: grid;
 }
 
 .resources__title{
@@ -260,9 +261,11 @@ main{
     background-color: #F6F6F6;
     display: flex;
     align-items: center;
+    justify-self: center;
 }
 
 .resources__white-box{
+    justify-self: center;
     height: auto;
     width: 328px;
     margin: 0 16px;
@@ -281,6 +284,7 @@ main{
 
 .infos{
     margin: 0 17px 32px;
+    justify-self: center;
 }
 
 .infos__title{
