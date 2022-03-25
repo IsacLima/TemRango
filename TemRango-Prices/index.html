@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="nav__mobile">
         <div class="logo">
             <img src="./assets/img/favicon.svg" alt="" class="logo__img">
         </div>
@@ -21,6 +21,28 @@
             <img src="./assets/img/menu.svg" alt="" class="menu__img">
         </div>
     </nav>   
+
+    <nav class="nav__desktop">
+        <div class="container">
+            <div class="desktop__menu">
+                <ul class="menu__list">
+                    <li>Home</li>
+                    <li class="list__selected">Planos</li>
+                    <li>Mais</li>
+                </ul>
+            </div>
+    
+            <div class="desktop__log">
+                <img src="./assets/img/logo.png" alt="" class="desktop__logo__img">
+            </div>
+    
+            <div class="login">
+                <button class="siginup__btn">Criar conta</button>
+                <button class="login__btn">Entrar</button>
+            </div>
+        </div>
+       
+    </nav>
 
     <header>
         <h3 class="header__info">PREÇOS E PLANOS</h3>
@@ -122,7 +144,7 @@
 
             </section>
 
-            <section class="content__section content__box">
+            <section class="content__section content__box last-section">
                 
                 <div class="content__header">
                     <img src="./assets/img/pro.svg" alt="" class="content__header__img">
@@ -152,9 +174,11 @@
         </div>
 
         <div class="obs">
-
-            <h2 class="obs__title">Pague taxas justas</h2>
-            <h3 class="obs__subtitle">Exemplo: em pedidos de R$ 20,00 a taxa é de 2,5%, uma das menores taxas do mercado.</h3>
+            <div class="obs__header">
+                <h2 class="obs__title">Pague taxas justas</h2>
+                <h3 class="obs__subtitle">Exemplo: em pedidos de R$ 20,00 a taxa é de 2,5%, uma das menores taxas do mercado.</h3>
+            </div>
+            
         
             <div class="obs__topic">
                 <div class="obs__img">1</div>
@@ -164,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="obs__topic">
+            <div class="obs__topic topic__margin">
                 <div class="obs__img">2</div>
                 <div class="obs__topic__content">
                     <h3 class="topic__content__title">De R$ 21,00 a R$ 50,00</h3>
@@ -224,7 +248,7 @@
             <div class="infos__content-box">
 
                 <div class="infos__content">
-                    <img src="" alt="" class="infos__content__img">
+                    <img src="./assets/img/google-play.svg" alt="" class="infos__content__img">
                     <div class="infos__content__text-box">
                         <h3 class="infos__text--small">Disponível no</h3>
                         <h3 class="infos__text--n">Google play</h3>
@@ -232,7 +256,7 @@
                 </div>
 
                 <div class="infos__content">
-                    <img src="" alt="" class="infos__content__img">
+                    <img src="./assets/img/icon-map.svg" alt="" class="infos__content__img img-2">
                     <div class="infos__content__text-box">
                         <h3 class="infos__text">Onde estamos</h3>
                     </div>
@@ -243,9 +267,9 @@
 
     </main>
 
-    <footer>
+    <footer class="footer__mobile">
         <div class="footer__header">
-            <img src="" alt="" class="footer__logo">
+            <img src="./assets/img/logo.png" alt="" class="footer__logo">
         </div>
 
         <div class="footer__content-box">
@@ -267,17 +291,23 @@
 
         <div class="sociais">
             
-            <h3 class="footer__content__title">Redes sociais</h3>
-            <div class="sociais__icons">
-                <img src="" alt="" class="sociais__icon">
-                <img src="" alt="" class="sociais__icon">
-                <img src="" alt="" class="sociais__icon">
-            </div>
-
-            <div class="top__icons">
-                <img src="" alt="" class="top__whats">
-                <div class="top">
-                    <img src="" alt="" class="top__img">
+            <h3 class="footer__content__title footer__title">Redes sociais</h3>
+            
+            <div class="footer-box">
+                <div class="sociais__icons">
+                    <img src="./assets/img/facebook(1).svg" alt="" class="sociais__icon">
+                    <img src="./assets/img/instagram.svg" alt="" class="sociais__icon">
+                    <img src="./assets/img/twitter(1).svg" alt="" class="sociais__icon">
+                </div>
+    
+                <div class="top__icons">
+                    <div class="whats">
+                        <img src="./assets/img/whatsapp.svg" alt="" class="whats__img">
+                    </div>
+                    
+                    <div class="top">
+                        <img src="./assets/img/select-duvidas.svg" alt="" class="top__img">
+                    </div>
                 </div>
             </div>
 
@@ -288,6 +318,62 @@
         </div>
 
     </footer>
+
+    <footer class="footer__desktop">
+        <div class="footer__header">
+            <img src="./assets/img/logo.png" alt="" class="footer__logo">
+        </div>
+
+        <div class="footer__content-box">
+
+            <div class="footer-box">
+                <div class="sociais__icons">
+                    <h3 class="footer__content__title footer__title">Redes sociais</h3>
+                    <img src="./assets/img/facebook(1).svg" alt="" class="sociais__icon">
+                    <img src="./assets/img/instagram.svg" alt="" class="sociais__icon">
+                    <img src="./assets/img/twitter(1).svg" alt="" class="sociais__icon">
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__content__title">Importante</h3>
+                <h3 class="footer__content__text">Termos de uso</h3>
+                <h3 class="footer__content__text">Privacidade</h3>
+                <h3 class="footer__content__text">Fale conosco</h3>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__content__title">Começar agora</h3>
+                <h3 class="footer__content__text">Venda no Tem Rango</h3>
+                <h3 class="footer__content__text">Seja um entregador</h3>
+                <h3 class="footer__content__text">Portal do vendedor</h3>
+            </div>
+
+        </div>
+
+        <div class="sociais">
+            
+            
+
+            <div class="top__icons">
+                <div class="whats">
+                    <img src="./assets/img/whatsapp.svg" alt="" class="whats__img">
+                </div>
+                
+                <div class="top">
+                    <img src="./assets/img/select-duvidas.svg" alt="" class="top__img">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__andress">
+            <h3 class="footer__andress__text">© 2021 Tem Rango - Rua Paulino Barroso, 777, Canindé/CE, Brasil</h3>
+        </div>
+
+    </footer>
+
+
 
 </body>
 
