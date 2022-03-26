@@ -479,9 +479,14 @@ a{
         width: 100px;
         margin: 0 21px 0 27px;
         border-radius: 0 0 15px 15px;
-        
+        display: flex;
+        flex-direction: column;
         color: #EFFBF7;
         background-color: #05CB95;
+    }
+
+    .selected__img{
+        margin-bottom: 8.11px;
     }
 
     .desktop__logo__img{
@@ -610,10 +615,6 @@ a{
         justify-self: center;
         display: flex;
     }
-
-    /* .footer-box{
-        display: none;
-    } */
 
     .footer-box--mv{
         display: flex;
