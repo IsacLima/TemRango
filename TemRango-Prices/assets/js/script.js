@@ -7,3 +7,10 @@ anchor[0].addEventListener("click", () =>{
         behavior: 'smooth',
       });
 })
+
+anchor[1].addEventListener("click", () =>{
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+})
