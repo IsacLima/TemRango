@@ -416,7 +416,10 @@ a{
 .whats{
     height: 70px;
     width: 70px;
-    margin-right: 30px;
+    
+    bottom: 74px;
+    right: 17px;
+    position: fixed;
     border-radius: 50%;
     background-color: #05CB95;
     display: flex;
@@ -427,6 +430,7 @@ a{
 .top{
     height: 55px;
     width: 55px;
+    margin-right: 100px;
     border-radius: 50%;
     background-color: #292F31;
     display: flex;
@@ -657,15 +661,15 @@ a{
     }
 
     .whats{
-        position: absolute;
+        position: fixed;
         right: 134px;
-        bottom: 23px;
+        /* bottom: 23px; */
     }
 
     .top{
         position: absolute;
-        right: 49px;
-        bottom: 23px;
+        right: 100px;
+        bottom: 81px;
     }
 
     footer{
