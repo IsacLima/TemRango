@@ -683,4 +683,25 @@ a{
     .footer__desktop{
         display: grid;
     }
+
+
+    .login__btn:hover{
+        cursor: pointer;
+        background-color: #0AA77C;
+    }
+
+    .siginup__btn:hover{
+        cursor: pointer;
+        color: #FFFFFF;
+        background-color: #05CB95;
+    }
+
+    li:hover,
+    .desktop__logo__img:hover,
+    section:hover,
+    .infos__content:hover,
+    .top:hover,
+    .whats:hover{
+        cursor: pointer;
+    }
 }
