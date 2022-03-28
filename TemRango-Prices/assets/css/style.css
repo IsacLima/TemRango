@@ -379,6 +379,11 @@ footer{
     color: #606060;
 }
 
+.footer__content__text:hover{
+    color: #05CB95;
+    cursor: pointer;
+}
+
 .footer__desktop{
     display: none;
 }
