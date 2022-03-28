@@ -481,6 +481,12 @@ a{
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 57px;
+        width: 100px;
+        margin: 0 21px 0 27px;
+        border-radius: 0 0 15px 15px;
+        display: flex;
+        flex-direction: column;
     }
 
     .list__selected{
@@ -492,6 +498,7 @@ a{
         flex-direction: column;
         color: #EFFBF7;
         background-color: #05CB95;
+        background-image: url(./assets/img/sorriso.svg);
     }
 
     .selected__img{
