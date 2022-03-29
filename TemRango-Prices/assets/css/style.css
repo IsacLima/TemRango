@@ -713,7 +713,14 @@ a{
     .desktop__logo__img:hover,
     .infos__content:hover,
     .top:hover,
+    .content__btn:hover,
     .whats:hover{
         cursor: pointer;
     }
+
+    section:hover .content__btn{
+        color: #FFFFFF;
+        background-color: #05CB95;
+    } 
+
 }
