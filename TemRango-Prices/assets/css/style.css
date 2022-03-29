@@ -565,6 +565,10 @@ a{
     top: 30px;
 }
 
+.disclaimer{
+    display: none;
+}
+
 @media (min-width:1169px){
     .container{
         height: 92px;
@@ -816,6 +820,11 @@ a{
         color: #FFFFFF;
         background-color: #05CB95;
     } 
+
+    .content__btn:hover{
+        cursor: pointer;
+        background-color: #0AA77C;
+    }
 
     .section-hover:hover {
         width: 273px;
