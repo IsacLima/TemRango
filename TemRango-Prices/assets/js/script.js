@@ -5,6 +5,7 @@ const navMenu = document.getElementsByClassName("nav__mobile")
 const floatMenu = document.getElementsByClassName("float-menu")
 const closeMenu = document.getElementsByClassName("float-menu__close")
 const mask = document.getElementsByClassName("mask")
+const page = document.getElementsByClassName("page")
 
 
 anchor[0].addEventListener("click", () =>{
@@ -37,10 +38,14 @@ menu[0].addEventListener("click", ()=>{
   navMenu[0].style.display = "none"
   floatMenu[0].style.display = "block"
   mask[0].style.display = "block"
+  page[0].style.overflow = "hidden"
+  page[0].style.marginTop = "173px"
 })
 
 closeMenu[0].addEventListener("click", ()=>{
   navMenu[0].style.display = ""
   floatMenu[0].style.display = ""
   mask[0].style.display = ""
+  page[0].style.overflow = ""
+  page[0].style.marginTop = ""
 })
