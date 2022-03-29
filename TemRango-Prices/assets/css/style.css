@@ -723,4 +723,8 @@ a{
         background-color: #05CB95;
     } 
 
+    section:hover {
+        border-color: #05CB95;
+    }
+
 }
