@@ -465,30 +465,24 @@ a{
     display: none;
     position: absolute;
     top: 0;
-    transition: all .5s;
+    transition: all .25s;
     border-radius: 0 0 15px 15px;
     background-color: #FFF;
-    animation: drop .5s;
+    animation: drop .25s;
 }
 
 .float-menu__box{
     margin: 30px 16px;
 
-    transition: all .5s;
+    transition: all .25s;
 }
 
 @keyframes drop {
     0%{
         transform: translateY(-150px);
-        opacity: 0;
-    }
-
-    80%{
-        opacity: 0.5;
     }
 
     100%{
-        opacity: 1;
         transform: translateY(0);
     }
 }
