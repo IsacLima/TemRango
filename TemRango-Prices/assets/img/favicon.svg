@@ -1,6 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
-  <g id="favicon" transform="translate(-16 -28)">
-    <rect id="bg" width="55" height="55" rx="15" transform="translate(16 28)" fill="#05cb95"/>
-    <path id="sorriso" d="M0,0C4.762,8.681,13.259,11.029,19.329,8.994,23.111,7.6,26.471,4.44,28.887,0" transform="translate(29.5 50.5)" fill="none" stroke="#292f31" stroke-linecap="round" stroke-width="5"/>
-  </g>
+<svg id="favicon" xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+  <rect id="bg" width="144" height="144" rx="15" fill="#05cb95"/>
+  <path id="sorriso" d="M0,0C15.213,27.733,42.358,35.234,61.75,28.732,73.832,24.283,84.564,14.184,92.283,0" transform="translate(25.5 57.5)" fill="none" stroke="#292f31" stroke-linecap="round" stroke-width="15"/>
 </svg>
