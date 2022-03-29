@@ -484,8 +484,6 @@ a{
         justify-content: center;
         height: 57px;
         width: 100px;
-        margin: 0 21px 0 27px;
-        border-radius: 0 0 15px 15px;
         display: flex;
         flex-direction: column;
     }
@@ -493,7 +491,6 @@ a{
     .list__selected{
         height: 92px;
         width: 100px;
-        margin: 0 21px 0 27px;
         border-radius: 0 0 15px 15px;
         display: flex;
         flex-direction: column;
@@ -727,6 +724,10 @@ a{
         width: 273px;
         height: 394px;
         border: 3px solid #05CB95;
+    }
+
+    .list__selected:hover{
+        background-color: #0AA77C;
     }
 
     .whats:hover .tooltip{
