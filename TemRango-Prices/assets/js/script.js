@@ -6,7 +6,11 @@ const floatMenu = document.getElementsByClassName("float-menu")
 const closeMenu = document.getElementsByClassName("float-menu__close")
 const mask = document.getElementsByClassName("mask")
 const page = document.getElementsByClassName("page")
+const whats = document.getElementsByClassName("whats")
 
+window.onscroll = function() {
+  scrollEnd(page[0])
+}
 
 anchor[0].addEventListener("click", () =>{
     window.scrollTo({
@@ -49,3 +53,17 @@ closeMenu[0].addEventListener("click", ()=>{
   page[0].style.overflow = ""
   page[0].style.marginTop = ""
 })
+
+function scrollEnd(item){
+  console.log(window.innerHeight, Math.round(page[0].getBoundingClientRect().bottom))
+  if(window.innerHeight === Math.round(page[0].getBoundingClientRect().bottom)){
+    Array.from(whats).forEach(element=>{
+      element.style.bottom = "74px"
+    })
+  }
+  else{
+    Array.from(whats).forEach(element=>{
+      element.style.bottom = ""
+    })
+  }
+}
