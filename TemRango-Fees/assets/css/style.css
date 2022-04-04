@@ -408,6 +408,11 @@ button{
   color: #606668;
 }
 
+.tooltips{
+	display: none;
+}
+
+
 @media (min-width:1250px){
 	.menu--short{
 		display: none;
