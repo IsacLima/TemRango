@@ -10,10 +10,13 @@
 
 .container{
     margin: 0 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 nav{
-    display: flex;
+	display: flex;
     align-items: flex-start;
     margin: 18px 0 5px;
 }
@@ -32,6 +35,7 @@ nav{
 
 .header__text{
     height: 62px;
+	max-width: 327px;
     margin-bottom: 20px;
     font-size: 14px;
     font-weight: 400;
@@ -79,6 +83,9 @@ button{
     width: 290px;
     border: 2px solid #979797;
     border-radius: 30px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #979797;
     background-color: #FFF;
 }
 
@@ -86,6 +93,7 @@ button{
     display: none;
     height: 20px;
     width: 100px;
+	position: absolute;
     border-radius: 0 0 6px 6px;
     font-size: 11px;
     font-weight: 400;
@@ -398,4 +406,320 @@ button{
   font-weight: 500;
 
   color: #606668;
+}
+
+@media (min-width:1250px){
+	.menu--short{
+		display: none;
+	}
+
+	.body{
+		display: grid;
+		grid-template-areas: 'menu corpo';
+		grid-template-columns: 72px calc(100% - 72px);
+	}
+
+	.menu--short{
+		grid-area: menu;
+		height: 1220px;
+		width: 72px;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		background-color: #F4F8F8;
+	}
+
+	.menu--short .menu__items{
+		margin: 0;
+	}
+
+	.menu--short .menu__header__icon{
+		margin-top: 40px;
+	}
+
+	.menu--short .menu__header__logo{
+		display: none;
+	}
+
+	.menu--short .menu__home .menu__icon{
+		margin-bottom: 65.97px;
+		margin-left: 0;
+	}
+
+	.menu--short .menu__requests .menu__items-1 .menu__icon{
+		margin-bottom: 18px;
+		
+	}
+
+	.menu--short .menu__requests, .menu--short .menu__navigation{
+		margin-bottom: 84px;
+		margin-left: 0;
+	}
+
+	.menu--short .menu__navigation{
+		margin-bottom: 86.98px;
+	}
+
+	.menu--short .menu__navigation .menu__items-1 .menu__icon{
+		margin-bottom: 20.12px;
+		margin-left: 0;
+	}
+
+	.menu--short .menu__navigation .menu__items-2 .menu__icon{
+		margin-bottom: 20.17px;
+	}
+
+	.menu--short .menu__settings{
+		margin-bottom: 83.7px;
+	}
+	
+	.menu--short .menu__settings .menu__items-1 .menu__icon{
+		margin-bottom: 22.07px;
+		margin-left: 0;
+	}
+
+	.menu--short .menu__settings .menu__items-2 .menu__icon{
+		margin-bottom: 20.59px;
+		margin-left: 0;
+	}
+
+	.menu--short .menu__settings .menu__items-3 .menu__icon{
+		margin-bottom: 20.33px;
+		margin-left: 0;
+	}
+
+	.menu--short .menu__settings .menu__items-4 .menu__icon{
+		margin-bottom: 20.07px;
+		margin-left: 0;
+	}
+
+	.menu--short .menu__settings .menu__items-5 .menu__icon{
+		margin-bottom: 20.07px;
+		margin-left: 0;
+	}
+
+	.menu--short .menu__settings .menu__items-6 .menu__icon{
+		margin-left: 0;
+	}
+
+	.menu--short .menu__admin{
+		margin-bottom: 272.05px;
+	}
+
+	.menu--short .menu__admin .menu__items-1 .menu__icon{
+		margin-bottom: 20.39px;
+		margin-left: 0;
+	}
+
+	.menu--short	.menu__admin .menu__items-2 .menu__icon{
+		margin-bottom: 21.84px;
+		margin-left: 1.5px;
+	}
+
+	.menu--short .menu__admin .menu__items-3 .menu__icon{
+		margin-bottom: 22.78px;
+		margin-left: 5px;
+	}
+
+	.menu--short .menu__admin .menu__items-4 .menu__icon{
+		margin-left: 3px;
+	}
+
+	.menu--short .support{
+		height: 66px;
+		width: 59px;
+		position: fixed;
+		left: 6px;
+		bottom: 10px;
+		background-color: #fff;
+		border-radius: 10px;
+  	box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.16);
+  	border: solid 1px #e1e1e1;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.menu--short .support:hover{
+		cursor: pointer;
+	}
+
+	.menu--short	.support__text{
+		display: none;
+	}
+
+	.menu .support:hover, .menu__header__icon{
+		cursor: pointer;
+	}
+
+	.menu__home{
+		margin-top: 53.52px;
+		display: flex;
+		align-items: center;
+	}
+
+	.tooltips{
+		display: block;
+		height: 40px;
+		width: 40.03px;
+		position: fixed;
+		left: 40px;
+		top: -50px;
+		z-index: 10000;
+	}
+
+	.tooltip{
+		display: none;
+		height: auto;
+		width: 195.03px;
+		box-shadow: 0px 3px 20px #0000001F;
+		position: fixed;
+		background-color: #fff;
+		left: 80px;
+		top: 40px;
+		z-index: 10000;
+	}
+
+	.tooltip__text:hover{
+		cursor: pointer;
+		color: #05CB95;
+	}
+
+	 .tooltip__item:hover .tooltip__text {
+		color: #05cb95;
+	}
+
+	.tooltip__item:hover .tooltip__arrow{
+		filter: invert(49%) sepia(81%) saturate(2084%) hue-rotate(129deg) brightness(106%) contrast(96%);
+	}
+
+	.tooltip__item{
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.tooltip__title{
+		height: 32px;
+		font-size: 16px;
+		font-weight: 500;
+		
+		padding-left: 25px;
+
+		margin: 14px 0 18px 0px; 
+
+		border-bottom: 1px solid #F1F1F1;
+		color: #292F31;
+	}
+
+	.tooltip__text{
+		height: 100%;
+		font-size: 14px;
+		font-weight: 400;
+
+		margin: 0 16.19px 15px 25px;
+
+		color: #575757;
+	}
+
+	.tooltip__arrow{
+		position: absolute;
+		right: 13.35px;
+		margin-top: 6px;
+		transform: rotate(270deg)
+	}
+
+	.title__hover:hover{
+		
+		color: #05CB95;
+	}
+
+	.icon__home:hover{
+		filter: invert(49%) sepia(81%) saturate(2084%) hue-rotate(129deg) brightness(106%) contrast(96%);
+	}
+
+	.menu__items:hover{
+		cursor: pointer;
+	}
+	
+	.menu__items:hover .menu__icon,
+	.menu__items:hover .menu__arrow{
+		filter: invert(49%) sepia(81%) saturate(2084%) hue-rotate(129deg) brightness(106%) contrast(96%);
+	}
+
+	.menu__items:hover .menu__text {
+		color: #05CB95;
+	}
+
+	.menu__home:hover {
+		cursor: pointer;
+		color: #05CB95;
+	}
+
+	.menu__home:hover .icon__home{
+		cursor: pointer;
+		filter: invert(49%) sepia(81%) saturate(2084%) hue-rotate(129deg) brightness(106%) contrast(96%);
+		
+	}
+	
+	.menu__home:hover .menu__text{
+		cursor: pointer;
+		color: #05CB95;
+	}
+
+	nav{
+		height: 46px;
+		width: 1044px;
+		margin: 38px 0 9px;
+	}
+
+	.nav__menu{
+		display: none;
+	}
+
+	.nav__title{
+		margin: 0;
+	}
+
+	header{
+		height: 20px;
+		width: 1044px;
+		margin-bottom: 25px;
+	}
+
+	.header__text{
+		max-width: none;
+	}
+
+	.content{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.content__header{
+		flex-direction: column;
+	}
+
+	.content__title{
+		margin: 20.9px 0 0 0;
+	}
+
+	.content__text{
+		max-width: 179px;
+		height: 43px;
+	}
+	
+	section{
+		height: 278px;
+		width: 231px;
+		margin-right: 28px;
+	}
+
+	button{
+		width: 172px;
+	}
+
 }
