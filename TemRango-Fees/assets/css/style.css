@@ -52,7 +52,7 @@ section{
 .content__header{
     display: flex;
     align-items: center;
-    margin: 50.39px 0 19.19px;
+    margin: 53px 0 19.19px;
 }
 
 .content__title{
@@ -68,4 +68,12 @@ section{
     font-weight: 400;
     text-align: center;
     color: #A7A8A8;
+}
+
+button{
+    height: 46px;
+    width: 290px;
+    border: 2px solid #979797;
+    border-radius: 30px;
+    background-color: #FFF;
 }
