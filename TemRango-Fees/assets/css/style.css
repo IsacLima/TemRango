@@ -48,3 +48,24 @@ section{
     border-radius: 15px;
     border: 1px solid #C8C8C8;
 }
+
+.content__header{
+    display: flex;
+    align-items: center;
+    margin: 50.39px 0 19.19px;
+}
+
+.content__title{
+    margin-left: 20.40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #292F31;
+}
+
+.content__text{
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #A7A8A8;
+}
