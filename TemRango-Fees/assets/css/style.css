@@ -33,3 +33,18 @@ nav{
     font-weight: 400;
     color: #575757;
 }
+
+.content{
+    margin-bottom: 42px;
+}
+
+section{
+    height: 213px;
+    width: 326px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid #C8C8C8;
+}
