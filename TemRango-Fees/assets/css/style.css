@@ -79,7 +79,7 @@ section{
 }
 
 button{
-    height: 46px;
+    height: 50px;
     width: 290px;
     border: 2px solid #979797;
     border-radius: 30px;
@@ -719,7 +719,14 @@ button{
 	}
 
 	button{
-		width: 172px;
+		width: 176px;
+	}
+
+	button:hover{
+		cursor: pointer;
+		border: none;
+		color: #FFF;
+		background-color: #05CB95;
 	}
 
 }
