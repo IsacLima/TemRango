@@ -25,3 +25,11 @@ nav{
     font-weight: 500;
     color: #292F31;
 }
+
+.header__text{
+    height: 62px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #575757;
+}
