@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-}.menu--short{
+}
+
+.menu--short{
 	display: none;
 }
 
@@ -78,4 +80,322 @@ button{
     border: 2px solid #979797;
     border-radius: 30px;
     background-color: #FFF;
+}
+
+.content__active{
+    display: none;
+    height: 20px;
+    width: 100px;
+    border-radius: 0 0 6px 6px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #FFF;
+    background-color: #11D2A4;
+    justify-content: center;
+    align-items: center;
+}
+
+.active{
+    display: flex;
+}
+
+/* menu-------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.gray-mask {
+	visibility: hidden;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	opacity: 50%;
+	z-index: 1099;
+	background-color: #373938;
+}
+
+.menu{
+	width: 243.6px;
+	position: absolute;
+	padding-right: 23.4px;
+	min-height: 1220px;
+	height: auto;
+	top: 0;
+	left: 0;
+	z-index: 1100;
+	background-color: #F4F8F8;
+	display: none;
+}
+
+	.menu .menu__admin .menu__items-3 .menu__icon,
+	.menu .menu__admin .menu__items-3 .menu__arrow
+	{
+		filter: invert(49%) sepia(81%) saturate(2084%) hue-rotate(129deg) brightness(106%) contrast(96%);
+	}
+
+	.menu .menu__admin .menu__items-3 .menu__text{
+		color: #05CB95;
+	}
+
+.menu__title__text{
+  height: 18px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 2.5;
+  text-align: left;
+	margin-top: 30px;
+	margin-bottom: 15px;
+  color: #999;
+}
+
+.menu__text{
+	height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.14;
+  text-align: left;
+	display: flex;
+	align-items: center;
+
+  color: #292f31;
+}
+
+.menu__arrow{
+	position: absolute;
+	right: 23.35px;
+}
+
+.menu__icon--hover{
+	display: none;
+}
+
+.menu__items{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.menu__header__logo{
+	margin-top: 26px;
+	height: 52px;
+	width: 147px;
+}
+
+.menu__header__icon{
+	height: 16.5px;
+	width: 22.6px;
+	margin-left: 15px;
+	margin-right: 11.42px;
+	margin-top: 40px;
+}
+
+.menu__header{
+	display: flex;
+}
+
+.menu__home{
+	margin-top: 53.52px;
+	display: flex;
+	align-items: center;
+}
+
+.menu__home .menu__icon{
+	margin-left: 17px;
+}
+
+.menu__home .menu__text{
+	text-align: center;
+	margin-left: 16px;
+}
+
+.menu__admin{
+	margin-bottom: 122.4px;
+}
+
+/* como os espaçamentos dos icones e dos textos nao sao iguais tive que fazer o espaçamento um a um, entao paciencia */
+
+.menu__requests, .menu__navigation{
+	margin-left: 15px;
+}
+
+.menu__requests .menu__items-2 .menu__icon{
+	margin-left: 2px;
+}
+
+.menu__requests .menu__items-1 .menu__text{
+	margin-left: 15px;
+}
+
+.menu__requests .menu__items-2 .menu__text{
+	margin-left: 17.5px;
+}
+
+.menu__navigation .menu__items-1 .menu__icon{
+	margin-left: 2px;
+}
+
+.menu__navigation .menu__items-1 .menu__text{
+	margin-left: 17.5px;
+}
+
+.menu__navigation .menu__items-2 .menu__text{
+	margin-left: 15.2px;
+}
+
+.menu__navigation .menu__items-3 .menu__text{
+	margin-left: 15.1px;
+}
+
+.menu__settings .menu__arrow, .menu__requests .menu__items-2 .menu__arrow{
+	transform: rotate(270deg);
+}
+
+.menu__settings .menu__items-3 .menu__arrow{
+	transform: none;
+}
+
+.menu__admin .menu__items-4 .menu__arrow{
+	transform: rotate(270deg);
+}
+
+.menu__settings .menu__title__text, .menu__admin .menu__title__text{
+	margin-left: 15px;
+}
+
+.menu__settings .menu__items-1 .menu__icon, .menu__settings .menu__items-4 .menu__icon, .menu__settings .menu__items-6 .menu__icon{
+	margin-left: 11px;
+} 
+
+.menu__settings .menu__items-2 .menu__icon, .menu__settings .menu__items-3 .menu__icon{
+	margin-left: 10.6px;
+}
+
+.menu__settings .menu__items-5 .menu__icon{
+	margin-left: 11.8px;
+}
+
+.menu__settings .menu__items-1 .menu__text{
+	margin-left: 17.3px;
+}
+
+.menu__settings .menu__items-2 .menu__text{
+	margin-left: 12.8px;
+}
+
+.menu__settings .menu__items-3 .menu__text{
+	margin-left: 12.8px;
+}
+
+.menu__settings .menu__items-4 .menu__text{
+	margin-left: 12.4px;
+}
+
+.menu__settings .menu__items-5 .menu__text{
+	margin-left: 13.3px;
+}
+
+.menu__settings .menu__items-6 .menu__text{
+	margin-left: 16.2px;
+}
+
+.menu__admin .menu__items-1 .menu__icon, .menu__admin .menu__items-2 .menu__icon{
+	margin-left: 11px;
+}
+
+.menu__admin .menu__items-3 .menu__icon{
+	margin-left: 14.6px;
+}
+
+.menu__admin .menu__items-4 .menu__icon{
+	margin-left: 11.6px;
+}
+
+.menu__admin .menu__items-1 .menu__text{
+	margin-left: 11.3px;
+}
+
+.menu__admin .menu__items-2 .menu__text{
+	margin-left: 15.1px;
+}
+
+.menu__admin .menu__items-3 .menu__text{
+	margin-left: 18.4px;
+}
+
+.menu__admin .menu__items-4 .menu__text{
+	margin-left: 16.1px;
+}
+
+.menu--short .menu__admin .menu__items-3 .menu__icon{
+	filter: invert(49%) sepia(81%) saturate(2084%) hue-rotate(129deg) brightness(106%) contrast(96%);
+} 
+/* fim dos espaçamentos ----------------------------------------------------------------- */
+
+.submenu__text--small{
+	height: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	text-align: left;
+	letter-spacing: 0px;
+	margin-bottom: 20px;
+	margin-left: 45px;
+	display: none;
+
+	color: #575757;
+}
+
+.menu__admin .submenu__text--small, .menu__settings .submenu__text--small{
+	margin-left: 60px;
+}
+
+.submenu__text--small:hover{
+	color: #05cb95;
+	cursor: pointer;
+}
+
+.submenu__text{
+	text-align: left;
+	font: normal normal medium 14px/14px;
+	letter-spacing: 0px;
+	color: #292F31;
+}
+
+.menu__submenu--master{
+	display: none;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 3px;
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+
+.last-text{
+	margin-bottom: 29px;
+}
+
+.menu .support{
+	height: 66px;
+	width: 238px;
+	position: fixed;
+	bottom: 19px;
+	left: 15px;
+	background-color: #fff;
+	border-radius: 10px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #e1e1e1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.menu .support__icon{
+	margin: 0 15px;
+}
+
+.menu .support__text{
+  height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #606668;
 }
