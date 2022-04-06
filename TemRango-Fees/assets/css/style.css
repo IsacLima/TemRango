@@ -111,16 +111,18 @@ button{
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	z-index: 2000;
 }
 
 .tooltip-first{
+	display: none;
 	height: 312px;
 	width: 293.1px;
 	margin: 49px 16px;
 	padding: 0 17px 0 17.9px;
 	border-radius: 15px;
 	background-color: #FFF;
+	position: fixed;
+	top: 0;
 	z-index: 2000;
 }
 
@@ -139,16 +141,28 @@ button{
 	max-width: 239.1px;
 }
 
-.first__icon{
+.back__icon{
 	margin-top: 10px;
 }
 
 .first__text{
 	height: 76px;
-	max-width: 239.1px;
+	max-width: 280.1px;
 	margin: 0 0 37.39px 0;
 	font-size: 16px;
 	font-weight: 400;
+	color: #292F31;
+}
+
+.tooltip__import{
+	font-size: 16px;
+	font-weight: 400;
+	color: #292F31;
+}
+
+.tooltip__import--n{
+	font-size: 16px;
+	font-weight: 700;
 	color: #292F31;
 }
 
@@ -161,6 +175,10 @@ button{
 	color: #FFF;
 	background-color: #05CB95;
 	border: none;
+}
+
+.back:hover{
+	cursor: pointer;
 }
 
 /* menu-------------------------------------------------------------------------------------------------------------------------------------------- */

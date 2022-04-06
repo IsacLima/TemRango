@@ -8,9 +8,19 @@ const container = document.getElementsByClassName('container')
 const content = document.getElementsByClassName('content')
 const menu_icon = document.getElementsByClassName('nav__icon')
 const btn = document.getElementsByClassName('btn')
+const back = document.getElementsByClassName('back')
+const tooltip = document.getElementsByClassName('tooltip-change')
 let current = []
 let left = content[0].getBoundingClientRect().x
 
+
+
+Array.from(back).forEach(item =>{
+	item.addEventListener("click", ()=>{
+		tooltip[0].children[0].style.display = ""
+			mask[0].style.visibility = ""
+	})
+})
 
 Array.from(btn).forEach(item => {
 	item.addEventListener("click", openTooltip)	
@@ -511,11 +521,13 @@ function anima(ini, fim, atu, dis){
 }
 
 function openTooltip(event){
-	current.push(event.target.parentElement.classList[0]) 
+	current.push(event.target.parentElement.classList) 
 	console.log(current)
 	if(current.length == 2){
 		if(current[0] != current[1]){
-			console.log('ta diferente')
+			tooltip[0].children[0].style.display = "block"
+			mask[0].style.visibility = "visible"
+			tooltip[0].children[0].children[1].innerText = `Você está usando a taxa por ${current[0]} para cobrança de sua entrega. Deseja cobrar por ${current[1]}?`
 		}
 		current.shift()
 	}
