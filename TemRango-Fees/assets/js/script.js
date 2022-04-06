@@ -10,10 +10,16 @@ const menu_icon = document.getElementsByClassName('nav__icon')
 const btn = document.getElementsByClassName('btn')
 const back = document.getElementsByClassName('back')
 const tooltip = document.getElementsByClassName('tooltip-change')
+const accept = document.getElementsByClassName('accept')
 let current = []
+let entrys = []
 let left = content[0].getBoundingClientRect().x
 
 
+//logica iniciada de troca de seção ativa
+//accept[0].addEventListener("click", ()=>{
+//	console.log(entrys[0])
+//})
 
 Array.from(back).forEach(item =>{
 	item.addEventListener("click", ()=>{
@@ -522,6 +528,7 @@ function anima(ini, fim, atu, dis){
 
 function openTooltip(event){
 	current.push(event.target.parentElement.classList) 
+	entrys.push(event.target.parentElement)
 	console.log(current)
 	if(current.length == 2){
 		if(current[0] != current[1]){
@@ -530,6 +537,7 @@ function openTooltip(event){
 			tooltip[0].children[0].children[1].innerText = `Você está usando a taxa por ${current[0]} para cobrança de sua entrega. Deseja cobrar por ${current[1]}?`
 		}
 		current.shift()
+		entrys.shift()
 	}
 }
 
