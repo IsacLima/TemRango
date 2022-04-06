@@ -107,6 +107,49 @@ button{
     display: flex;
 }
 
+.tooltip-change{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	z-index: 2000;
+}
+
+.tooltip-first{
+	height: 312px;
+	width: 328px;
+	margin: 49px 16px;
+	border-radius: 15px;
+	background-color: #FFF;
+	z-index: 2000;
+}
+
+.first__header{
+	height: 68px;
+	margin: 25.58px 20.1px 15.02px 18.9px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.first__title{
+	font-size: 28px;
+	font-weight: 700;
+	color: #292F31;
+	max-width: 239.1px;
+}
+
+.first__icon{
+	margin-top: 10px;
+}
+
+.first__text{
+	height: 76px;
+	max-width: 239.1px;
+	margin: 0 17px 37.39px 17.9px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #292F31;
+}
+
 /* menu-------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .gray-mask {
