@@ -133,15 +133,7 @@ button{
 	display: none;
 }
 
-	.menu .menu__admin .menu__items-3 .menu__icon,
-	.menu .menu__admin .menu__items-3 .menu__arrow
-	{
-		filter: invert(49%) sepia(81%) saturate(2084%) hue-rotate(129deg) brightness(106%) contrast(96%);
-	}
 
-	.menu .menu__admin .menu__items-3 .menu__text{
-		color: #05CB95;
-	}
 
 .menu__title__text{
   height: 18px;
@@ -333,9 +325,6 @@ button{
 	margin-left: 16.1px;
 }
 
-.menu--short .menu__admin .menu__items-3 .menu__icon{
-	filter: invert(49%) sepia(81%) saturate(2084%) hue-rotate(129deg) brightness(106%) contrast(96%);
-} 
 /* fim dos espaçamentos ----------------------------------------------------------------- */
 
 .submenu__text--small{
