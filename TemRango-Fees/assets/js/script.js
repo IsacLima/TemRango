@@ -7,7 +7,14 @@ const mask = document.getElementsByClassName("gray-mask")
 const container = document.getElementsByClassName('container')
 const content = document.getElementsByClassName('content')
 const menu_icon = document.getElementsByClassName('nav__icon')
+const btn = document.getElementsByClassName('btn')
+let current = []
 let left = content[0].getBoundingClientRect().x
+
+
+Array.from(btn).forEach(item => {
+	item.addEventListener("click", openTooltip)	
+});
 
 Array.from(itemsmenu).forEach(item=>{
 	tips = tips = document.getElementsByClassName("tooltips")
@@ -502,3 +509,15 @@ function anima(ini, fim, atu, dis){
 
 	
 }
+
+function openTooltip(event){
+	current.push(event.target.parentElement.classList[0]) 
+	console.log(current)
+	if(current.length == 2){
+		if(current[0] != current[1]){
+			console.log('ta diferente')
+		}
+		current.shift()
+	}
+}
+
