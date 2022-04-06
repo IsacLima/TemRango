@@ -116,8 +116,9 @@ button{
 
 .tooltip-first{
 	height: 312px;
-	width: 328px;
+	width: 293.1px;
 	margin: 49px 16px;
+	padding: 0 17px 0 17.9px;
 	border-radius: 15px;
 	background-color: #FFF;
 	z-index: 2000;
@@ -125,9 +126,10 @@ button{
 
 .first__header{
 	height: 68px;
-	margin: 25.58px 20.1px 15.02px 18.9px;
+	margin: 25.58px 0 15.02px 0;
 	display: flex;
 	align-items: flex-start;
+	justify-content: space-between;
 }
 
 .first__title{
@@ -144,10 +146,21 @@ button{
 .first__text{
 	height: 76px;
 	max-width: 239.1px;
-	margin: 0 17px 37.39px 17.9px;
+	margin: 0 0 37.39px 0;
 	font-size: 16px;
 	font-weight: 400;
 	color: #292F31;
+}
+
+.accept{
+	height: 55px;
+	width: 290px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #FFF;
+	background-color: #05CB95;
+	border: none;
 }
 
 /* menu-------------------------------------------------------------------------------------------------------------------------------------------- */
