@@ -17,7 +17,8 @@ let left = content[0].getBoundingClientRect().x
 
 // logica iniciada de troca de seção ativa
 accept[0].addEventListener("click", ()=>{
-	console.log(entrys)
+	console.log(current[0].value)
+	openTooltip()
 	entrys[0].children[0].style.display = "none"
 	entrys[0].children[3].innerText = "configurar"
 	entrys[1].children[0].style.display = "flex"
@@ -33,7 +34,7 @@ Array.from(back).forEach(item =>{
 })
 
 Array.from(btn).forEach(item => {
-	item.addEventListener("click", openTooltip)	
+	item.addEventListener("click", openChange)	
 });
 
 Array.from(itemsmenu).forEach(item=>{
@@ -530,7 +531,7 @@ function anima(ini, fim, atu, dis){
 	
 }
 
-function openTooltip(event){
+function openChange(event){
 	current.push(event.target.parentElement.classList) 
 	entrys.push(event.target.parentElement)
 	if(current.length == 2){
@@ -547,3 +548,6 @@ function openTooltip(event){
 	}
 }
 
+function openTooltip(){
+	console.log("teste")
+}

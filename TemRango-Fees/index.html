@@ -296,6 +296,7 @@
 
     </div>
 
+    <!--tooltips do menu-->
     <div class="tooltips">
         <div class="tooltip tooltip-1">
             <h2 class="tooltip__title">Cardápio</h2>
@@ -340,7 +341,7 @@
             <section class="ÁREA">
                 <div class="content__active">ATIVO</div>
                 <div class="content__header">
-                    <img src="./assets/img/unico.svg" alt="" class="content__img">
+                    <img src="./assets/img/area.svg" alt="" class="content__img">
                     <h2 class="content__title">Por área</h2>
                 </div>
 
@@ -353,7 +354,7 @@
             <section class="KM">
                 <div class="content__active">ATIVO</div>
                 <div class="content__header">
-                    <img src="./assets/img/area.svg" alt="" class="content__img">
+                    <img src="./assets/img/quilometro.svg" alt="" class="content__img">
                     <h2 class="content__title">Por km</h2>
                 </div>
 
@@ -387,6 +388,97 @@
                 <h3 class="first__text"></h3>
                 <button class="accept back">Sim, vou trocar</button>
             </div>
+        </div>
+
+        <div class="tips-selection">
+
+            <div class="tip__one-time">
+                <h2 class="tip__title">Taxa única</h2>
+                <h3 class="tip__text">Com a taxa única ativa, o sistema aplicará o valor definido por você em todas as entregas não importando a distancia.</h3>
+                <h2 class="input__title">Valor da taxa *</h2>
+                <div class="input-box">
+                    <div class="input__left">R$</div>
+                    <input type="text" placeholder="ex: 5,00" class="input">
+                </div>
+
+                <h2 class="status__title">Status</h2>
+                <h3 class="status__text">Deixe esse status ativo para ser sua taxa de entrega padrão.</h3>
+                <div class="switch__container">
+                    <input id="switch-shado" class="switch switch--shadow" type="checkbox" />
+                    <label class="label-switch" for="switch-shado"></label>
+                    <h3 class="text text-1">Inativo</h3>
+                    <h3 class="text text-2">Ativo</h3>
+                </div>
+
+                <button class="save">Salvar</button>
+                <button class="cancel">cancelar</button>
+            </div>
+
+            <div class="tip__district">
+                <h2 class="tip__title">Taxa por bairro</h2>
+                <h3 class="tip__text">Crie valores diferentes de taxa de entregas para cada bairro de sua região de entrega.</h3>
+                <h3 class="tip__obs">Você vai criar taxas para os bairros de <strong>Canindé/CE</strong>, para alterar sua cidade de cadastro, <a href="">clique aqui</a></h3>
+                <h2 class="input__title">Nome do bairro *</h2>
+                <input type="text" placeholder="ex: centro" class="input input--large">
+                <h2 class="input__title">Valor da taxa *</h2>
+                <div class="input-box">
+                    <div class="input__left">R$</div>
+                    <input type="text" placeholder="ex: 5,00" class="input">
+                </div>
+                <button class="add-dist">adicionar</button>
+                <div class="add__titles">
+                    <h2 class="input__title first-add">Bairros</h2>
+                    <h2 class="input__title">Taxa</h2>
+                    <h2 class="input__title">Ações</h2>
+                </div>
+
+                <div class="add-item">
+                    <h2 class="add__text first-add">Centro</h2>
+                    <h2 class="add__text">2,50</h2>
+                    <div class="circles">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <h2 class="status__title">Status</h2>
+                <h3 class="status__text">Deixe esse status ativo para ser sua taxa de entrega padrão.</h3>
+                <div class="switch__container">
+                    <input id="switch-shado-2" class="switch switch--shadow" type="checkbox" />
+                    <label class="label-switch" for="switch-shado-2"></label>
+                    <h3 class="text text-1">Inativo</h3>
+                    <h3 class="text text-2">Ativo</h3>
+                </div>
+
+                <button class="save">Salvar</button>
+                <button class="cancel">cancelar</button>
+
+            </div>
+
+            <div class="tip__km">
+                <h2 class="tip__title">Taxa por Km</h2>
+                <h3 class="tip__text">Com a taxa por km ativa, o sistema aplicará o valor definido por você a cada km rodado. O GPS do entregador precisa está ativo.</h3>
+                <h2 class="input__title">Valor da taxa por cada Km *</h2>
+                <div class="input-box">
+                    <div class="input__left">R$</div>
+                    <input type="text" placeholder="ex: 5,00" class="input">
+                </div>
+
+                <h2 class="status__title">Status</h2>
+                <h3 class="status__text">Deixe esse status ativo para ser sua taxa de entrega padrão.</h3>
+                <div class="switch__container">
+                    <input id="switch-shado-3" class="switch switch--shadow" type="checkbox" />
+                    <label class="label-switch" for="switch-shado-3"></label>
+                    <h3 class="text text-1">Inativo</h3>
+                    <h3 class="text text-2">Ativo</h3>
+                </div>
+
+                <button class="save">Salvar</button>
+                <button class="cancel">cancelar</button>
+            </div>
+
+
         </div>
 
     </div>
