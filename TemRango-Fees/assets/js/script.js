@@ -11,15 +11,14 @@ const btn = document.getElementsByClassName('btn')
 const back = document.getElementsByClassName('back')
 const tooltip = document.getElementsByClassName('tooltip-change')
 const accept = document.getElementsByClassName('accept')
-let current = []
+let current = [btn[0].parentElement.classList]
 let entrys = []
 let left = content[0].getBoundingClientRect().x
 
-
-//logica iniciada de troca de seção ativa
-//accept[0].addEventListener("click", ()=>{
-//	console.log(entrys[0])
-//})
+// logica iniciada de troca de seção ativa
+accept[0].addEventListener("click", ()=>{
+	console.log(entrys[0])
+})
 
 Array.from(back).forEach(item =>{
 	item.addEventListener("click", ()=>{
