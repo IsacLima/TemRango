@@ -53,7 +53,6 @@ Array.from(swit).forEach(children=>{
 accept[0].addEventListener("click", ()=>{
 	active = false
 	tooltip[0].children[0].style.display = ""
-	mask[0].style.visibility = "" ;
 	openTooltip(current[0].value)
 	
 
@@ -61,7 +60,7 @@ accept[0].addEventListener("click", ()=>{
 
 Array.from(back).forEach(item =>{
 	item.addEventListener("click", ()=>{
-		event.target.parentElement.parentElement.style.display = "none"
+		tooltip[0].children[0].style.display = "none"
 		mask[0].style.visibility = ""
 	})
 })
@@ -567,7 +566,6 @@ function anima(ini, fim, atu, dis){
 function openChange(event){
 	current.push(event.target.parentElement.classList) 
 	entrys.push(event.target.parentElement)
-	console.log(active, current)
 	if(current.length == 2){
 		if(current[0] != current[1]){
 			tooltip[0].children[0].style.display = "block"
@@ -583,10 +581,10 @@ function openChange(event){
 }
 
 function openTooltip(chosen){
-	
 	if(chosen == "TAXA ÚNICA"){
 		tipSelection[0].children[0].style.display = "block"
 		mask[0].style.visibility = "visible"
+		console.log()
 	}
 	else if(chosen == "BAIRRO"){
 		tipSelection[0].children[1].style.display = "block"
