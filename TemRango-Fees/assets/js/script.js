@@ -17,14 +17,28 @@ const save = document.getElementsByClassName('save')
 let current = [btn[0].parentElement.classList]
 let entrys = [btn[0].parentElement]
 let left = content[0].getBoundingClientRect().x
-let active = false
+let active = false 
+
 
 
 Array.from(save).forEach(item =>{
 	item.addEventListener("click",()=>{
-		event.target.parentElement.style.display = ""
+		console.log(event.target.parentElement)
+		event.target.parentElement.style.display = "none"
 		mask[0].style.visibility = ""
 		if(active == true){
+			if(document.getElementsByClassName("content__active")[0].style.display == "flex"){
+				document.getElementsByClassName("content__active")[0].style.display = "none"
+			}
+			else if(document.getElementsByClassName("content__active")[1].style.display == "flex"){
+				document.getElementsByClassName("content__active")[1].style.display = "none"
+			}
+			else if(document.getElementsByClassName("content__active")[2].style.display == "flex"){
+				document.getElementsByClassName("content__active")[2].style.display = "none"
+			}
+			else if(document.getElementsByClassName("content__active")[3].style.display == "flex"){
+				document.getElementsByClassName("content__active")[3].style.display = "none"
+			}
 			entrys[0].children[0].style.display = "none"
 			entrys[0].children[3].innerText = "configurar"
 			entrys[1].children[0].style.display = "flex"
@@ -49,9 +63,7 @@ Array.from(swit).forEach(children=>{
 	})
 })
 
-// logica iniciada de troca de seção ativa
 accept[0].addEventListener("click", ()=>{
-	active = false
 	tooltip[0].children[0].style.display = ""
 	openTooltip(current[0].value)
 	
@@ -572,6 +584,9 @@ function openChange(event){
 			mask[0].style.visibility = "visible"
 			tooltip[0].children[0].children[1].innerText = `Você está usando a taxa por ${current[0]} para cobrança de sua entrega. Deseja cobrar por ${current[1]}?`
 		}
+		else{
+			openTooltip(current[0].value)
+		}
 		current.shift()
 		if(current[0] != current[1] && entrys.length == 3){
 			entrys.shift()
@@ -582,15 +597,26 @@ function openChange(event){
 
 function openTooltip(chosen){
 	if(chosen == "TAXA ÚNICA"){
+		active = false
+		swit[0].checked = false
+		swit[0].parentElement.children[2].style.display =  "block"
+		swit[0].parentElement.children[3].style.display =  "none"
 		tipSelection[0].children[0].style.display = "block"
 		mask[0].style.visibility = "visible"
-		console.log()
 	}
 	else if(chosen == "BAIRRO"){
+		active = false
+		swit[1].checked = false
+		swit[1].parentElement.children[2].style.display =  "block"
+		swit[1].parentElement.children[3].style.display =  "none"
 		tipSelection[0].children[1].style.display = "block"
 		mask[0].style.visibility = "visible"
 	}
 	else if(chosen == "KM"){
+		active = false
+		swit[2].checked = false
+		swit[2].parentElement.children[2].style.display =  "block"
+		swit[2].parentElement.children[3].style.display =  "none"
 		tipSelection[0].children[2].style.display = "block"
 		mask[0].style.visibility = "visible"
 	}
