@@ -489,6 +489,7 @@ textarea:focus, input:focus, select:focus {
 } 
 
 .tip__km{
+	display: none;
 	height: auto;
 	width: 290px;
 	padding: 0 19px;
@@ -505,7 +506,7 @@ textarea:focus, input:focus, select:focus {
 /* menu-------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .gray-mask {
-	/* visibility: hidden; */
+	visibility: hidden;
 	position: fixed;
 	height: 100%;
 	width: 100%;

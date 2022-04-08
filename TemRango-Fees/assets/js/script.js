@@ -11,25 +11,58 @@ const btn = document.getElementsByClassName('btn')
 const back = document.getElementsByClassName('back')
 const tooltip = document.getElementsByClassName('tooltip-change')
 const accept = document.getElementsByClassName('accept')
+const swit = document.getElementsByClassName('switch')
+const tipSelection = document.getElementsByClassName('tips-selection')
+const save = document.getElementsByClassName('save')
 let current = [btn[0].parentElement.classList]
 let entrys = [btn[0].parentElement]
 let left = content[0].getBoundingClientRect().x
+let active = false
+
+
+Array.from(save).forEach(item =>{
+	item.addEventListener("click",()=>{
+		event.target.parentElement.style.display = ""
+		mask[0].style.visibility = ""
+		if(active == true){
+			entrys[0].children[0].style.display = "none"
+			entrys[0].children[3].innerText = "configurar"
+			entrys[1].children[0].style.display = "flex"
+			entrys[1].children[3].innerText = "editar"
+		}
+		
+	})
+})
+
+Array.from(swit).forEach(children=>{
+	children.addEventListener("click", ()=>{
+		if(event.target.parentElement.children[2].style.display == "none"){
+			event.target.parentElement.children[2].style.display = "block"
+			event.target.parentElement.children[3].style.display = "none"
+			active = false
+		}
+		else{
+			event.target.parentElement.children[3].style.display = "block"
+			event.target.parentElement.children[2].style.display = "none"
+			active = true
+		}
+	})
+})
 
 // logica iniciada de troca de seção ativa
 accept[0].addEventListener("click", ()=>{
-	console.log(current[0].value)
-	openTooltip()
-	entrys[0].children[0].style.display = "none"
-	entrys[0].children[3].innerText = "configurar"
-	entrys[1].children[0].style.display = "flex"
-	entrys[1].children[3].innerText = "editar"
+	active = false
+	tooltip[0].children[0].style.display = ""
+	mask[0].style.visibility = "" ;
+	openTooltip(current[0].value)
+	
 
 })
 
 Array.from(back).forEach(item =>{
 	item.addEventListener("click", ()=>{
-		tooltip[0].children[0].style.display = ""
-			mask[0].style.visibility = ""
+		event.target.parentElement.parentElement.style.display = "none"
+		mask[0].style.visibility = ""
 	})
 })
 
@@ -534,6 +567,7 @@ function anima(ini, fim, atu, dis){
 function openChange(event){
 	current.push(event.target.parentElement.classList) 
 	entrys.push(event.target.parentElement)
+	console.log(active, current)
 	if(current.length == 2){
 		if(current[0] != current[1]){
 			tooltip[0].children[0].style.display = "block"
@@ -548,6 +582,26 @@ function openChange(event){
 	}
 }
 
-function openTooltip(){
-	console.log("teste")
+function openTooltip(chosen){
+	
+	if(chosen == "TAXA ÚNICA"){
+		tipSelection[0].children[0].style.display = "block"
+		mask[0].style.visibility = "visible"
+	}
+	else if(chosen == "BAIRRO"){
+		tipSelection[0].children[1].style.display = "block"
+		mask[0].style.visibility = "visible"
+	}
+	else if(chosen == "KM"){
+		tipSelection[0].children[2].style.display = "block"
+		mask[0].style.visibility = "visible"
+	}
+	else{
+		event.target.parentElement.style.display = ""
+		mask[0].style.visibility = ""
+		entrys[0].children[0].style.display = "none"
+		entrys[0].children[3].innerText = "configurar"
+		entrys[1].children[0].style.display = "flex"
+		entrys[1].children[3].innerText = "editar"
+	}
 }
