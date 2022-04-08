@@ -498,6 +498,10 @@ textarea:focus, input:focus, select:focus {
 	border-radius: 15px;
 	background-color: #FFF;
 }
+
+.cancel:hover{
+	color: #05CB95;
+}
 /* menu-------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .gray-mask {
