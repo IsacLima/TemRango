@@ -33,19 +33,20 @@ Array.from(save).forEach(item =>{
 		event.target.parentElement.style.display = "none"
 		mask[0].style.visibility = ""
 		if(active == true){
-			if(document.getElementsByClassName("content__active")[0].style.display == "flex"){
+			if(document.getElementsByClassName("content__active")[0].style.display == "flex" || document.getElementsByClassName("content__active")[0].style.display == ""){
 				document.getElementsByClassName("content__active")[0].style.display = "none"
 				document.getElementsByClassName("content__active")[0].parentElement.children[3].innerText = "configurar"
+				
 			}
-			else if(document.getElementsByClassName("content__active")[1].style.display == "flex"){
+			else if(document.getElementsByClassName("content__active")[1].style.display == "flex" || document.getElementsByClassName("content__active")[1].style.display == ""){
 				document.getElementsByClassName("content__active")[1].style.display = "none"
 				document.getElementsByClassName("content__active")[1].parentElement.children[3].innerText = "configurar"
 			}
-			else if(document.getElementsByClassName("content__active")[2].style.display == "flex"){
+			else if(document.getElementsByClassName("content__active")[2].style.display == "flex" || document.getElementsByClassName("content__active")[2].style.display == ""){
 				document.getElementsByClassName("content__active")[2].style.display = "none"
 				document.getElementsByClassName("content__active")[2].parentElement.children[3].innerText = "configurar"
 			}
-			else if(document.getElementsByClassName("content__active")[3].style.display == "flex"){
+			else if(document.getElementsByClassName("content__active")[3].style.display == "flex" || document.getElementsByClassName("content__active")[3].style.display == ""){
 				document.getElementsByClassName("content__active")[3].style.display = "none"
 				document.getElementsByClassName("content__active")[3].parentElement.children[3].innerText = "configurar"
 			}

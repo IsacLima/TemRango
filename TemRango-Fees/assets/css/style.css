@@ -103,7 +103,7 @@ button{
     align-items: center;
 }
 
-.active{
+.start .content__active{
     display: flex;
 }
 
