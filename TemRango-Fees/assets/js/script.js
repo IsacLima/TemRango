@@ -20,6 +20,13 @@ let left = content[0].getBoundingClientRect().x
 let active = false 
 
 
+Array.from(document.getElementsByClassName("cancel")).forEach(element=>{
+	element.addEventListener("click", ()=>{
+		console.log(event.target.parentElement)
+		event.target.parentElement.style.display = "none"
+		mask[0].style.visibility = "hidden"
+	})
+})
 
 Array.from(save).forEach(item =>{
 	item.addEventListener("click",()=>{
