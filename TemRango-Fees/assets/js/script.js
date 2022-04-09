@@ -55,6 +55,10 @@ Array.from(save).forEach(item =>{
 			entrys[1].children[0].style.display = "flex"
 			entrys[1].children[3].innerText = "editar"
 		}
+		else{
+			current.shift()
+			current.push(entrys[0].classList)
+		}
 		
 	})
 })
@@ -85,7 +89,7 @@ Array.from(back).forEach(item =>{
 	item.addEventListener("click", ()=>{
 		current.shift()
 		current.push(entrys[0].classList)
-		console.log(current, entrys)
+		
 		tooltip[0].children[0].style.display = "none"
 		mask[0].style.visibility = ""
 	})
@@ -93,7 +97,7 @@ Array.from(back).forEach(item =>{
 
 Array.from(btn).forEach(item => {
 	item.addEventListener("click", openChange)	
-});
+})
 
 Array.from(itemsmenu).forEach(item=>{
 	tips = tips = document.getElementsByClassName("tooltips")
@@ -610,7 +614,7 @@ function openChange(event){
 }
 
 function openTooltip(chosen){
-	if(chosen == "TAXA ÚNICA start"){
+	if(chosen == "TAXA ÚNICA"){
 		active = false
 		swit[0].checked = false
 		swit[0].parentElement.children[2].style.display =  "block"
