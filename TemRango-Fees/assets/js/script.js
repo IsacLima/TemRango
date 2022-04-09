@@ -83,6 +83,9 @@ accept[0].addEventListener("click", ()=>{
 
 Array.from(back).forEach(item =>{
 	item.addEventListener("click", ()=>{
+		current.shift()
+		current.push(entrys[0].classList)
+		console.log(current, entrys)
 		tooltip[0].children[0].style.display = "none"
 		mask[0].style.visibility = ""
 	})
@@ -607,7 +610,7 @@ function openChange(event){
 }
 
 function openTooltip(chosen){
-	if(chosen == "TAXA ÚNICA"){
+	if(chosen == "TAXA ÚNICA start"){
 		active = false
 		swit[0].checked = false
 		swit[0].parentElement.children[2].style.display =  "block"
