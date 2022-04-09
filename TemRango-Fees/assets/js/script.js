@@ -22,7 +22,6 @@ let active = false
 
 Array.from(document.getElementsByClassName("cancel")).forEach(element=>{
 	element.addEventListener("click", ()=>{
-		console.log(event.target.parentElement)
 		event.target.parentElement.style.display = "none"
 		mask[0].style.visibility = "hidden"
 	})
@@ -58,6 +57,7 @@ Array.from(save).forEach(item =>{
 		else{
 			current.shift()
 			current.push(entrys[0].classList)
+			entrys.pop()
 		}
 		
 	})
@@ -89,7 +89,7 @@ Array.from(back).forEach(item =>{
 	item.addEventListener("click", ()=>{
 		current.shift()
 		current.push(entrys[0].classList)
-		
+		entrys.pop()
 		tooltip[0].children[0].style.display = "none"
 		mask[0].style.visibility = ""
 	})
