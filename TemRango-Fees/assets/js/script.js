@@ -23,69 +23,9 @@ let active = false
 
 
 Array.from(addDist).forEach(element=>{
-	element.addEventListener('click', ()=>{
-		let test = checkDevice()
-		console.log(event.target.parentElement.children[3].children[1].children[1].children[1].value)
-		if(test == true && event.target.parentElement.children[4].value != "" && event.target.parentElement.children[6].children[1].value != ""){
-			let newElement = document.createElement("div")
-			newElement.appendChild(document.createElement("h2"))
-			newElement.appendChild(document.createElement("h2"))
-			newElement.appendChild(document.createElement("div"))
-			newElement.children[2].appendChild(document.createElement("input"))
-			newElement.children[2].appendChild(document.createElement("label"))
-			newElement.appendChild(document.createElement("div"))
-			newElement.children[3].appendChild(document.createElement("div"))
-			newElement.children[3].appendChild(document.createElement("div"))
-			newElement.children[3].appendChild(document.createElement("div"))
-			newElement.classList = "add-item"
-			newElement.children[0].classList = "add__text first"
-			newElement.children[0].innerText = event.target.parentElement.children[4].value
-			newElement.children[1].classList = "add__text"
-			newElement.children[1].innerText = event.target.parentElement.children[6].children[1].value
-			newElement.children[2].classList = "switch__container"
-			newElement.children[2].children[0].classList = "switch switch--shadow m"
-			newElement.children[2].children[0].id = "switch"
-			newElement.children[2].children[0].nodeType = "checkbox"
-			newElement.children[2].children[1].classList = "label-switch"
-			console.log(newElement)
-			newElement.children[3].classList = "circles"
-			newElement.children[3].children[0].classList = "circle"
-			newElement.children[3].children[1].classList = "circle"
-			newElement.children[3].children[2].classList = "circle"
-			const before = document.getElementsByClassName("status__title")
-			tipSelection[0].children[1].insertBefore(newElement, before[1])
-		}
-		
-		if(test == false && event.target.parentElement.children[3].children[0].children[1].value != "" && event.target.parentElement.children[3].children[1].children[1].children[1].value != ""){
-			let newElement = document.createElement("div")
-			newElement.appendChild(document.createElement("h2"))
-			newElement.appendChild(document.createElement("h2"))
-			newElement.appendChild(document.createElement("div"))
-			newElement.children[2].appendChild(document.createElement("input"))
-			newElement.children[2].appendChild(document.createElement("label"))
-			newElement.appendChild(document.createElement("div"))
-			newElement.children[3].appendChild(document.createElement("div"))
-			newElement.children[3].appendChild(document.createElement("div"))
-			newElement.children[3].appendChild(document.createElement("div"))
-			newElement.classList = "add-item"
-			newElement.children[0].classList = "add__text first"
-			newElement.children[0].innerText = event.target.parentElement.children[3].children[0].children[1].value 
-			newElement.children[1].classList = "add__text"
-			newElement.children[1].innerText = event.target.parentElement.children[3].children[1].children[1].children[1].value
-			newElement.children[2].classList = "switch__container"
-			newElement.children[2].children[0].classList = "switch switch--shadow m"
-			newElement.children[2].children[0].id = `switch${cont}`
-			newElement.children[2].children[0].type = "checkbox"
-			//newElement.children[2].children[1].classList = "label-switch"
-			newElement.children[2].innerHTML = `<input id="switch${cont}" class="switch switch--shadow m" type="checkbox" /> <label class="label-switch" for="switch${cont}"></label>`
-			cont = cont + 1
-			console.log(newElement.children[2].children)
-			newElement.children[3].classList = "circles"
-			newElement.children[3].children[0].classList = "circle"
-			newElement.children[3].children[1].classList = "circle"
-			newElement.children[3].children[2].classList = "circle"
-			const before = document.getElementsByClassName("status__title")
-			tipSelection[0].children[1].insertBefore(newElement, before[1])
+	element.addEventListener('click', ()=>{	
+		if(event.target.parentElement.children[3].children[0].children[1].value != "" && event.target.parentElement.children[3].children[1].children[1].children[1].value != ""){
+			addElement()
 		}
 		
 	})
@@ -104,15 +44,16 @@ function addElement(){
 	newElement.children[3].appendChild(document.createElement("div"))
 	newElement.classList = "add-item"
 	newElement.children[0].classList = "add__text first"
-	newElement.children[0].innerText = event.target.parentElement.children[4].value
+	newElement.children[0].innerText = event.target.parentElement.children[3].children[0].children[1].value 
 	newElement.children[1].classList = "add__text"
-	newElement.children[1].innerText = event.target.parentElement.children[6].children[1].value
-	newElement.children[2].classList = "switch__container"
-	newElement.children[2].children[0].classList = "switch switch--shadow m"
-	newElement.children[2].children[0].id = "switch"
-	newElement.children[2].children[0].nodeType = "checkbox"
-	newElement.children[2].children[1].classList = "label-switch"
-	console.log(newElement)
+	newElement.children[1].innerText = event.target.parentElement.children[3].children[1].children[1].children[1].value
+	newElement.children[2].classList = "switch__container m"
+	newElement.children[2].children[0].classList = "switch switch--shadow"
+	newElement.children[2].children[0].id = `switch${cont}`
+	newElement.children[2].children[0].type = "checkbox"
+	newElement.children[2].innerHTML = `<input id="switch${cont}" class="switch switch--shadow m" type="checkbox" /> <label class="label-switch" for="switch${cont}"></label>`
+	cont = cont + 1
+	console.log(newElement.children[2].children)
 	newElement.children[3].classList = "circles"
 	newElement.children[3].children[0].classList = "circle"
 	newElement.children[3].children[1].classList = "circle"
