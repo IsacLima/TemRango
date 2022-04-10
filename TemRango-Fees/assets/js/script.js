@@ -11,42 +11,123 @@ const btn = document.getElementsByClassName('btn')
 const back = document.getElementsByClassName('back')
 const tooltip = document.getElementsByClassName('tooltip-change')
 const accept = document.getElementsByClassName('accept')
-const swit = document.getElementsByClassName('switch')
+const swit = document.getElementsByClassName('s')
 const tipSelection = document.getElementsByClassName('tips-selection')
 const save = document.getElementsByClassName('save')
 const addDist = document.getElementsByClassName('add-dist')
 let current = [btn[0].parentElement.classList]
 let entrys = [btn[0].parentElement]
 let left = content[0].getBoundingClientRect().x
+let cont = 0
 let active = false 
 
-addDist[0].addEventListener('click', ()=>{
-	if(event.target.parentElement.children[4].value != "" && event.target.parentElement.children[6].children[1].value != ""){
-		let newElement = document.createElement("div")
-		newElement.appendChild(document.createElement("h2"))
-		newElement.appendChild(document.createElement("h2"))
-		newElement.appendChild(document.createElement("div"))
-		newElement.children[2].appendChild(document.createElement("div"))
-		newElement.children[2].appendChild(document.createElement("div"))
-		newElement.children[2].appendChild(document.createElement("div"))
-		newElement.classList = "add-item"
-		newElement.children[0].classList = "add__text first"
-		newElement.children[0].innerText = event.target.parentElement.children[4].value
-		newElement.children[1].classList = "add__text"
-		newElement.children[1].innerText = event.target.parentElement.children[6].children[1].value
-		newElement.children[2].classList = "circles"
-		newElement.children[2].children[0].classList = "circle"
-		newElement.children[2].children[1].classList = "circle"
-		newElement.children[2].children[2].classList = "circle"
-		const before = document.getElementsByClassName("status__title")
-		tipSelection[0].children[1].insertBefore(newElement, before[1])
-	}
+
+Array.from(addDist).forEach(element=>{
+	element.addEventListener('click', ()=>{
+		let test = checkDevice()
+		console.log(event.target.parentElement.children[3].children[1].children[1].children[1].value)
+		if(test == true && event.target.parentElement.children[4].value != "" && event.target.parentElement.children[6].children[1].value != ""){
+			let newElement = document.createElement("div")
+			newElement.appendChild(document.createElement("h2"))
+			newElement.appendChild(document.createElement("h2"))
+			newElement.appendChild(document.createElement("div"))
+			newElement.children[2].appendChild(document.createElement("input"))
+			newElement.children[2].appendChild(document.createElement("label"))
+			newElement.appendChild(document.createElement("div"))
+			newElement.children[3].appendChild(document.createElement("div"))
+			newElement.children[3].appendChild(document.createElement("div"))
+			newElement.children[3].appendChild(document.createElement("div"))
+			newElement.classList = "add-item"
+			newElement.children[0].classList = "add__text first"
+			newElement.children[0].innerText = event.target.parentElement.children[4].value
+			newElement.children[1].classList = "add__text"
+			newElement.children[1].innerText = event.target.parentElement.children[6].children[1].value
+			newElement.children[2].classList = "switch__container"
+			newElement.children[2].children[0].classList = "switch switch--shadow m"
+			newElement.children[2].children[0].id = "switch"
+			newElement.children[2].children[0].nodeType = "checkbox"
+			newElement.children[2].children[1].classList = "label-switch"
+			console.log(newElement)
+			newElement.children[3].classList = "circles"
+			newElement.children[3].children[0].classList = "circle"
+			newElement.children[3].children[1].classList = "circle"
+			newElement.children[3].children[2].classList = "circle"
+			const before = document.getElementsByClassName("status__title")
+			tipSelection[0].children[1].insertBefore(newElement, before[1])
+		}
+		
+		if(test == false && event.target.parentElement.children[3].children[0].children[1].value != "" && event.target.parentElement.children[3].children[1].children[1].children[1].value != ""){
+			let newElement = document.createElement("div")
+			newElement.appendChild(document.createElement("h2"))
+			newElement.appendChild(document.createElement("h2"))
+			newElement.appendChild(document.createElement("div"))
+			newElement.children[2].appendChild(document.createElement("input"))
+			newElement.children[2].appendChild(document.createElement("label"))
+			newElement.appendChild(document.createElement("div"))
+			newElement.children[3].appendChild(document.createElement("div"))
+			newElement.children[3].appendChild(document.createElement("div"))
+			newElement.children[3].appendChild(document.createElement("div"))
+			newElement.classList = "add-item"
+			newElement.children[0].classList = "add__text first"
+			newElement.children[0].innerText = event.target.parentElement.children[3].children[0].children[1].value 
+			newElement.children[1].classList = "add__text"
+			newElement.children[1].innerText = event.target.parentElement.children[3].children[1].children[1].children[1].value
+			newElement.children[2].classList = "switch__container"
+			newElement.children[2].children[0].classList = "switch switch--shadow m"
+			newElement.children[2].children[0].id = `switch${cont}`
+			newElement.children[2].children[0].type = "checkbox"
+			//newElement.children[2].children[1].classList = "label-switch"
+			newElement.children[2].innerHTML = `<input id="switch${cont}" class="switch switch--shadow m" type="checkbox" /> <label class="label-switch" for="switch${cont}"></label>`
+			cont = cont + 1
+			console.log(newElement.children[2].children)
+			newElement.children[3].classList = "circles"
+			newElement.children[3].children[0].classList = "circle"
+			newElement.children[3].children[1].classList = "circle"
+			newElement.children[3].children[2].classList = "circle"
+			const before = document.getElementsByClassName("status__title")
+			tipSelection[0].children[1].insertBefore(newElement, before[1])
+		}
+		
+	})
 })
+
+function addElement(){
+	let newElement = document.createElement("div")
+	newElement.appendChild(document.createElement("h2"))
+	newElement.appendChild(document.createElement("h2"))
+	newElement.appendChild(document.createElement("div"))
+	newElement.children[2].appendChild(document.createElement("input"))
+	newElement.children[2].appendChild(document.createElement("label"))
+	newElement.appendChild(document.createElement("div"))
+	newElement.children[3].appendChild(document.createElement("div"))
+	newElement.children[3].appendChild(document.createElement("div"))
+	newElement.children[3].appendChild(document.createElement("div"))
+	newElement.classList = "add-item"
+	newElement.children[0].classList = "add__text first"
+	newElement.children[0].innerText = event.target.parentElement.children[4].value
+	newElement.children[1].classList = "add__text"
+	newElement.children[1].innerText = event.target.parentElement.children[6].children[1].value
+	newElement.children[2].classList = "switch__container"
+	newElement.children[2].children[0].classList = "switch switch--shadow m"
+	newElement.children[2].children[0].id = "switch"
+	newElement.children[2].children[0].nodeType = "checkbox"
+	newElement.children[2].children[1].classList = "label-switch"
+	console.log(newElement)
+	newElement.children[3].classList = "circles"
+	newElement.children[3].children[0].classList = "circle"
+	newElement.children[3].children[1].classList = "circle"
+	newElement.children[3].children[2].classList = "circle"
+	const before = document.getElementsByClassName("status__title")
+	tipSelection[0].children[1].insertBefore(newElement, before[1])
+}
 
 Array.from(document.getElementsByClassName("cancel")).forEach(element=>{
 	element.addEventListener("click", ()=>{
 		event.target.parentElement.style.display = "none"
 		mask[0].style.visibility = "hidden"
+		current.shift()
+		current.push(entrys[0].classList)
+		entrys.pop()
 	})
 })
 
@@ -427,7 +508,7 @@ function anima(ini, fim, atu, dis){
     }
 }
 
- function menuBehavior(item){
+function menuBehavior(item){
 	var test = checkDevice()
 	if(test == false){
 		var className = item.className
