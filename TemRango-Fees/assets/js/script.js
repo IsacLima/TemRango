@@ -14,11 +14,34 @@ const accept = document.getElementsByClassName('accept')
 const swit = document.getElementsByClassName('switch')
 const tipSelection = document.getElementsByClassName('tips-selection')
 const save = document.getElementsByClassName('save')
+const addDist = document.getElementsByClassName('add-dist')
 let current = [btn[0].parentElement.classList]
 let entrys = [btn[0].parentElement]
 let left = content[0].getBoundingClientRect().x
 let active = false 
 
+addDist[0].addEventListener('click', ()=>{
+	if(event.target.parentElement.children[4].value != "" && event.target.parentElement.children[6].children[1].value != ""){
+		let newElement = document.createElement("div")
+		newElement.appendChild(document.createElement("h2"))
+		newElement.appendChild(document.createElement("h2"))
+		newElement.appendChild(document.createElement("div"))
+		newElement.children[2].appendChild(document.createElement("div"))
+		newElement.children[2].appendChild(document.createElement("div"))
+		newElement.children[2].appendChild(document.createElement("div"))
+		newElement.classList = "add-item"
+		newElement.children[0].classList = "add__text first"
+		newElement.children[0].innerText = event.target.parentElement.children[4].value
+		newElement.children[1].classList = "add__text"
+		newElement.children[1].innerText = event.target.parentElement.children[6].children[1].value
+		newElement.children[2].classList = "circles"
+		newElement.children[2].children[0].classList = "circle"
+		newElement.children[2].children[1].classList = "circle"
+		newElement.children[2].children[2].classList = "circle"
+		const before = document.getElementsByClassName("status__title")
+		tipSelection[0].children[1].insertBefore(newElement, before[1])
+	}
+})
 
 Array.from(document.getElementsByClassName("cancel")).forEach(element=>{
 	element.addEventListener("click", ()=>{
