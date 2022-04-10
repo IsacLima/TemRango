@@ -4,6 +4,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+.disclaimer{
+	display: none;
+}
+
 .menu--short{
 	display: none;
 }
