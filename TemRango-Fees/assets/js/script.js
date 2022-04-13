@@ -154,6 +154,9 @@ Array.from(itemsmenu).forEach(item=>{
 	}
 
 	else{
+		item.addEventListener('click', ()=>{
+			menuBehavior(item)
+		})	
 		tip[0].addEventListener('mouseover', ()=>{
 			tip[0].style.display = "block"
 			tips = tips = document.getElementsByClassName("tooltips")
@@ -335,7 +338,6 @@ function anima(ini, fim, atu, dis){
 }
 
 function menuBehavior(item){
-	console.log(event)
 	var test = checkDevice()
 	if(test == false){
 		var className = item.className
