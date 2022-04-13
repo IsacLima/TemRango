@@ -53,7 +53,6 @@ function addElement(){
 	newElement.children[2].children[0].type = "checkbox"
 	newElement.children[2].innerHTML = `<input id="switch${cont}" class="switch switch--shadow m" type="checkbox" /> <label class="label-switch" for="switch${cont}"></label>`
 	cont = cont + 1
-	console.log(newElement.children[2].children)
 	newElement.children[3].classList = "circles"
 	newElement.children[3].children[0].classList = "circle"
 	newElement.children[3].children[1].classList = "circle"
@@ -277,113 +276,6 @@ menu_icon[0].addEventListener('click', ()=>{
 	anima(0,1,0)
 })
 
-Array.from(itemsmenu).forEach(item=>{
-	tips = tips = document.getElementsByClassName("tooltips")
-	tips[0].style.display = "none"
-	var test = checkDevice()
-	if(test == true){
-		item.addEventListener('click', ()=>{
-			menuBehavior(item)
-		})	
-	}
-
-	else{
-		tip[0].addEventListener('mouseover', ()=>{
-			tip[0].style.display = "block"
-			tips = tips = document.getElementsByClassName("tooltips")
-			tips[0].style.display = "block"
-		})
-
-		document.getElementsByClassName("tooltips")[0].addEventListener('mouseover', ()=>{
-				tip[0].style.display = "block"
-				tips = document.getElementsByClassName("tooltips")
-				tips[0].style.display = "block"
-		})
-
-		item.addEventListener('mouseover', ()=>{
-			var position = Array.from(itemsmenu).indexOf(item)
-			list = []
-			listParents = []
-			for(var i = 0;i<15;i++){
-				list.push(itemsmenu[i+15])
-				listParents.push(itemsmenu[i+15].parentElement)
-			}
-			if(position <= 14){
-				tip[0].children[0].classList.remove("title__hover")
-				tip[0].style.display = "block"
-				tips = document.getElementsByClassName("tooltips")
-				tips[0].style.display = "block"
-				document.getElementsByClassName("tooltip")[0].style.cursor = "pointer"
-				var top = item.getBoundingClientRect().y
-				top = top+'px'
-				top = top.toString()
-				tip[0].style.top = top
-				document.getElementsByClassName("tooltips")[0].style.top = top
-				tip[0].children[0].textContent = list[position].children[2].innerText
-				var className = item.className
-				className = className[(className.length-1)]
-
-				if(item.parentElement.className == "menu__settings" && item.className != "menu__items menu__items-3" || (item.parentElement.className == "menu__admin" && item.className == "menu__items menu__items-4") || (item.parentElement.className == "menu__requests" && item.className == "menu__items menu__items-2")){
-					tip[0].children[0].classList.add("title__hover")
-					tip[0].children[1].style.display = "none"
-					tip[0].children[2].style.display = "none"
-					document.getElementsByClassName("tooltip")[0].style.height = "50px"
-					tip[0].children[0].style.border = "none"	
-					if(item.className == "menu__items menu__items-4"){
-						document.getElementsByClassName("tooltip")[0].style.width = "207px"
-					}		
-					else{
-						document.getElementsByClassName("tooltip")[0].style.width = ""
-					}
-				}
-
-				else if(item.parentElement.className == "menu__settings" && item.className == "menu__items menu__items-3"){
-					tip[0].children[1].style.display = ""
-					tip[0].children[2].style.display = ""
-					document.getElementsByClassName("tooltip")[0].style.height = "auto"
-					document.getElementById("text-1").innerHTML = listParents[position].children[Number(className)+1].children[0].innerText
-					document.getElementById("text-2").innerHTML = listParents[position].children[Number(className)+1].children[1].innerText
-					tip[0].children[0].style.border = ""
-				}
-
-				else{
-					tip[0].children[1].style.display = ""
-					tip[0].children[2].style.display = ""
-					document.getElementsByClassName("tooltip")[0].style.height = "auto"
-					document.getElementById("text-1").innerHTML = listParents[position].children[className*2].children[0].innerText
-					document.getElementById("text-2").innerHTML = listParents[position].children[className*2].children[1].innerText
-					
-					tip[0].children[0].style.border = ""
-				}
-			}	
-			list = []
-			listParents = []
-		})
-			
-
-		document.getElementsByClassName("tooltips")[0].addEventListener('mouseout', ()=>{
-			var tips = document.getElementsByClassName('tooltips')
-			tip[0].style.display = "none"
-			tips[0].style.display = ""
-		})
-
-		item.addEventListener('mouseout', ()=>{
-			var tips = document.getElementsByClassName('tooltips')
-			tip[0].style.display = "none"
-			tips[0].style.display = "none"
-		})
-	}
-
-})
-
-Array.from(itemsmenu).forEach(item=>{
-	item.addEventListener('click', ()=>{
-		if(menushort[0].style.display == "none"){
-			menuBehavior(item)
-		}
-	})	
-})
-
 function checkDevice() { 
     if( navigator.userAgent.match(/Android/i)
     || navigator.userAgent.match(/webOS/i)
@@ -443,6 +335,7 @@ function anima(ini, fim, atu, dis){
 }
 
 function menuBehavior(item){
+	console.log(event)
 	var test = checkDevice()
 	if(test == false){
 		var className = item.className
@@ -486,7 +379,6 @@ function menuBehavior(item){
 		}
 
 		else if(item.parentElement.className == "menu__settings" && item.className == "menu__items menu__items-3"){
-			console.log(item.parentElement.children[Number(className)+1])
 			if(item.parentElement.children[Number(className)+1].style.display == "block"){
 				item.parentElement.children[Number(className)+1].style.display = "none"
 				item.parentElement.children[className].children[3].style.transform = ""
@@ -546,7 +438,7 @@ function menuBehavior(item){
 			
 			if(item.className == "menu__items menu__items-2"){
 			}
-
+			
 			else if(item.className == "menu__items menu__items-1"){
 				if(item.parentElement.children[className*2].children[0].style.display == "block"){
 					item.parentElement.children[className].children[0].style.filter = ""
@@ -575,7 +467,6 @@ function menuBehavior(item){
 		}
 
 		else if(item.parentElement.className == "menu__settings" && item.className == "menu__items menu__items-3"){
-			console.log(item.parentElement.children[Number(className)+1])
 			if(item.parentElement.children[Number(className)+1].style.display == "block"){
 				item.parentElement.children[Number(className)+1].style.display = "none"
 				item.parentElement.children[className].children[3].style.transform = ""
