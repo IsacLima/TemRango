@@ -275,13 +275,6 @@ menu_icon[0].addEventListener('click', ()=>{
 		menu[0].style.zIndex = "1100"
 	}
 	anima(0,1,0)
-	// mask[0].addEventListener('click', ()=>{
-	// 	anima(1,0,0)
-	// 	menu[0].style.display = "none"
-	// 	mask[0].style.visibility = "hidden"
-	// 	container[0].style.width = ""
-	// 	container[0].style.position = ""
-	// })
 })
 
 Array.from(itemsmenu).forEach(item=>{
