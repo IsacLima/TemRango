@@ -269,6 +269,10 @@ strong{
 	background-color: #F1F1F1;
 }
 
+.input--radius{
+	border-radius: 8px;
+}
+
 .status__title{
 	font-size: 18px;
 	font-weight: 500;
