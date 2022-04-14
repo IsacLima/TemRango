@@ -1200,6 +1200,10 @@ textarea:focus, input:focus, select:focus {
 		width: 320px;
 	}
 
+	.save:hover{
+		background-color: #0AA77C;
+	}
+
 	.cancel{
 		width: 65px;
 		margin-left: 61px;
@@ -1207,7 +1211,7 @@ textarea:focus, input:focus, select:focus {
 
 	.cancel:hover{
 		background-color: white;
-		color: #292F31;
+		color: ##05CB95;
 	}
 
 	.tip__km{
