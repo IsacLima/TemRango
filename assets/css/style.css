@@ -374,9 +374,14 @@ strong{
 	height: 55px;
 	width: 290px;
 	border: none;
+	color: #949494;
+	background-color: #D5D5D5;
+	margin-bottom: 25px;
+}
+
+.green{
 	color: #FFFFFF;
 	background-color: #05CB95;
-	margin-bottom: 25px;
 }
 
 .cancel{
@@ -1139,7 +1144,7 @@ textarea:focus, input:focus, select:focus {
 		width: 176px;
 	}
 
-	button:hover{
+	section button:hover{
 		cursor: pointer;
 		border: none;
 		color: #FFF;
@@ -1204,7 +1209,7 @@ textarea:focus, input:focus, select:focus {
 		width: 320px;
 	}
 
-	.save:hover{
+	.green:hover{
 		background-color: #0AA77C;
 	}
 

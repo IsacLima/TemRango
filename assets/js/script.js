@@ -15,12 +15,39 @@ const swit = document.getElementsByClassName('s')
 const tipSelection = document.getElementsByClassName('tips-selection')
 const save = document.getElementsByClassName('save')
 const addDist = document.getElementsByClassName('add-dist')
+const input = document.getElementsByClassName('input')
 let current = [btn[0].parentElement.classList]
 let entrys = [btn[0].parentElement]
 let left = content[0].getBoundingClientRect().x
 let cont = 0
-let active = false 
+let active = false
+let switList = [false, false]
+let inputList = [false, false]
 
+
+Array.from(input).forEach(element=>{
+	element.addEventListener("input", ()=>{
+		if(element.value != ""){
+			if(element.parentElement.parentElement.className == "tip__one-time"){
+				inputList[0] = true
+				verifyInput("only")
+			}
+			else if(element.parentElement.parentElement.className == "tip__km"){
+				inputList[1] = true
+				verifyInput("km")
+			}
+		}
+		else{
+			if(element.parentElement.parentElement.className == "tip__one-time"){
+				inputList[0] = false
+			}
+			else if(element.parentElement.parentElement.className == "tip__km"){
+				inputList[1] = false
+			}
+		}
+		verifyInput()
+	})	
+})
 
 Array.from(addDist).forEach(element=>{
 	element.addEventListener('click', ()=>{	
@@ -113,12 +140,30 @@ Array.from(swit).forEach(children=>{
 			event.target.parentElement.children[2].style.display = "block"
 			event.target.parentElement.children[3].style.display = "none"
 			active = false
+			if(children.parentElement.parentElement.className == "tip__one-time"){
+				switList[0] = false
+				verifyInput("only")
+			}
+			else if(children.parentElement.parentElement.className == "tip__km"){
+				switList[1] = false
+				verifyInput("km")
+			}
+			console.log(switList, inputList)
 		}
 		else{
 			event.target.parentElement.children[3].style.display = "block"
 			event.target.parentElement.children[2].style.display = "none"
 			active = true
+			if(children.parentElement.parentElement.className == "tip__one-time"){
+				switList[0] = true
+				verifyInput("only")
+			}
+			else if(children.parentElement.parentElement.className == "tip__km"){
+				switList[1] = true
+				verifyInput("km")
+			}
 		}
+		
 	})
 })
 
@@ -577,4 +622,25 @@ function openTooltip(chosen){
 		entrys[1].children[0].style.display = "flex"
 		entrys[1].children[3].innerText = "editar"
 	}
+}
+
+function verifyInput(tooltip){
+	console.log(switList[0], inputList[0])
+	if(switList[0] == true && inputList[0] == true && tooltip == "only"){
+		document.getElementsByClassName("save")[0].classList.add("green")
+	}
+	else if((switList[0] == true && inputList[0] == false) || (switList[0] == false && inputList[0] == true)){
+		document.getElementsByClassName("save")[0].classList.remove("green")
+		console.log(document.getElementsByClassName("save")[0].classList)
+	}
+	
+	
+	if(switList[1] == true && inputList[1] == true && tooltip == "km"){
+		document.getElementsByClassName("save")[2].classList.add("green")
+	}
+	else if((switList[1] == true && inputList[1] == false) || (switList[1] == false && inputList[1] == true)){
+		document.getElementsByClassName("save")[2].classList.remove("green")
+		console.log(document.getElementsByClassName("save")[2].classList)
+	}
+	
 }
