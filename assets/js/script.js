@@ -148,7 +148,6 @@ Array.from(swit).forEach(children=>{
 				switList[1] = false
 				verifyInput("km")
 			}
-			console.log(switList, inputList)
 		}
 		else{
 			event.target.parentElement.children[3].style.display = "block"
@@ -625,13 +624,11 @@ function openTooltip(chosen){
 }
 
 function verifyInput(tooltip){
-	console.log(switList[0], inputList[0])
 	if(switList[0] == true && inputList[0] == true && tooltip == "only"){
 		document.getElementsByClassName("save")[0].classList.add("green")
 	}
 	else if((switList[0] == true && inputList[0] == false) || (switList[0] == false && inputList[0] == true)){
 		document.getElementsByClassName("save")[0].classList.remove("green")
-		console.log(document.getElementsByClassName("save")[0].classList)
 	}
 	
 	
@@ -640,7 +637,6 @@ function verifyInput(tooltip){
 	}
 	else if((switList[1] == true && inputList[1] == false) || (switList[1] == false && inputList[1] == true)){
 		document.getElementsByClassName("save")[2].classList.remove("green")
-		console.log(document.getElementsByClassName("save")[2].classList)
 	}
 	
 }
