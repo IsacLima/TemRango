@@ -531,7 +531,7 @@ function openChange(event){
 		if(current[0] != current[1]){
 			tooltip[0].children[0].style.display = "block"
 			mask[0].style.visibility = "visible"
-			tooltip[0].children[0].children[1].innerText = `Você está usando a taxa por ${current[0]} para cobrança de sua entrega. Deseja cobrar por ${current[1]}?`
+			tooltip[0].children[0].children[1].innerHTML = `Você está usando a taxa por ${current[0]} para cobrança de sua entrega. Deseja cobrar por <strong>${current[1]}</strong>?`
 		}
 		else{
 			openTooltip(current[0].value)
