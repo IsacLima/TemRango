@@ -498,6 +498,7 @@ a{
 	width: 21px;
 	margin-right: 31px;
 	margin-left: 30px;
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	justify-self: center;
@@ -539,6 +540,22 @@ textarea:focus, input:focus, select:focus {
 .cancel:hover{
 	color: #05CB95;
 }
+
+/* tooltip do add bairro -------------------------------------------------------------------------------------------------------------------------- */
+
+.options{
+	height: 171px;
+	width: 140px;
+	position: absolute;
+	top: 30px;
+	right: -27px;
+	z-index: 100;
+	border-radius: 8px;
+	box-shadow: 0px 3px 25px #00000029;
+	background-color: #FFFFFF;
+}
+
+
 /* menu-------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .gray-mask {
