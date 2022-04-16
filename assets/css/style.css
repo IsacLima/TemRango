@@ -544,7 +544,6 @@ textarea:focus, input:focus, select:focus {
 /* tooltip do add bairro -------------------------------------------------------------------------------------------------------------------------- */
 
 .options{
-	height: 171px;
 	width: 140px;
 	position: absolute;
 	top: 30px;
@@ -555,6 +554,47 @@ textarea:focus, input:focus, select:focus {
 	background-color: #FFFFFF;
 }
 
+.option__item{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 20.24px 29px 20.39px;
+}
+
+.option__first{
+	margin-top: 27.98px;
+/* 	margin-right: 20.63px; */
+}
+
+.option__last{
+	margin-bottom: 25.52px;
+	margin-right: 20.61px;
+}
+
+.option__text{
+	font-size: 16px;
+	font-weight: 400;
+	color: #949494;
+}
+
+.option__last .option__text{
+	margin-left: 0;
+}
+
+.img__gray{
+	filter: invert(64%) sepia(4%) saturate(8%) hue-rotate(5deg) brightness(93%) contrast(80%);
+}
+
+.option__item:hover .option__text{
+	color: #05CB95;
+}
+
+.option__item:hover .option__img{
+	filter: invert(57%) sepia(98%) saturate(784%) hue-rotate(115deg) brightness(90%) contrast(96%);
+}
+
+.options__switch{
+	display: block;
+}
 
 /* menu-------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -1311,5 +1351,13 @@ textarea:focus, input:focus, select:focus {
 	.add-item .switch__container{
 		margin: 0;
 		margin-bottom: 5px;
+	}
+
+	.options{
+		right: -12px;
+	}
+
+	.option__last{
+		display: none;
 	}
 }
