@@ -17,7 +17,8 @@ const save = document.getElementsByClassName('save')
 const addDist = document.getElementsByClassName('add-dist')
 const input = document.getElementsByClassName('input')
 const switchAdd = document.getElementsByClassName('switch__add')
-const options = document.getElementsByClassName('options')
+let options = document.getElementsByClassName('options')
+let moreOptions = document.getElementsByClassName('circles')
 let current = [btn[0].parentElement.classList]
 let entrys = [btn[0].parentElement]
 let left = content[0].getBoundingClientRect().x
@@ -26,10 +27,25 @@ let active = false
 let switList = [false, false]
 let inputList = [false, false]
 
+attArray(Array.from(moreOptions))
 
+function attArray(list){
+	list.forEach(item=>{
+		item.addEventListener("click", ()=>{
+			console.log("ue")
+			let top = event.clientY - 250
+			options[0].style.top = `${top}px`
+			if(options[0].style.display == "block"){
+				options[0].style.display = "none"
+			}
+			else{
+				options[0].style.display = "block"
+			}
+		})
+	})
+}
 
 switchAdd[0].addEventListener("click", ()=>{
-	console.log(switchAdd[0].parentElement)
 	if(switchAdd[0].checked == true){
 		switchAdd[0].parentElement.children[1].style.display = "block"
 		switchAdd[0].parentElement.children[0].style.display = "none"
