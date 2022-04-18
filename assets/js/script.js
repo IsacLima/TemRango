@@ -27,21 +27,20 @@ let active = false
 let switList = [false, false]
 let inputList = [false, false]
 
-attArray(Array.from(moreOptions))
+Array.from(moreOptions).forEach(item=>{
+	attArray(item)	
+})
 
-function attArray(list){
-	list.forEach(item=>{
-		item.addEventListener("click", ()=>{
-			console.log("ue")
-			let top = event.clientY - 250
-			options[0].style.top = `${top}px`
-			if(options[0].style.display == "block"){
-				options[0].style.display = "none"
-			}
-			else{
-				options[0].style.display = "block"
-			}
-		})
+function attArray(ent){
+	ent.addEventListener("click", ()=>{
+		let top = event.pageY - 610
+		options[0].style.top = `${top}px`
+		if(options[0].style.display == "block"){
+			options[0].style.display = "none"
+		}
+		else{
+			options[0].style.display = "block"
+		}
 	})
 }
 
@@ -117,6 +116,7 @@ function addElement(){
 	newElement.children[3].children[2].classList = "circle"
 	const before = document.getElementsByClassName("status__title")
 	tipSelection[0].children[1].insertBefore(newElement, before[1])
+	attArray(newElement.children[3])	
 }
 
 Array.from(document.getElementsByClassName("cancel")).forEach(element=>{
