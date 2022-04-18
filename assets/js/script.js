@@ -16,6 +16,8 @@ const tipSelection = document.getElementsByClassName('tips-selection')
 const save = document.getElementsByClassName('save')
 const addDist = document.getElementsByClassName('add-dist')
 const input = document.getElementsByClassName('input')
+const switchAdd = document.getElementsByClassName('switch__add')
+const options = document.getElementsByClassName('options')
 let current = [btn[0].parentElement.classList]
 let entrys = [btn[0].parentElement]
 let left = content[0].getBoundingClientRect().x
@@ -24,6 +26,19 @@ let active = false
 let switList = [false, false]
 let inputList = [false, false]
 
+
+
+switchAdd[0].addEventListener("click", ()=>{
+	console.log(switchAdd[0].parentElement)
+	if(switchAdd[0].checked == true){
+		switchAdd[0].parentElement.children[1].style.display = "block"
+		switchAdd[0].parentElement.children[0].style.display = "none"
+	}
+	else{
+		switchAdd[0].parentElement.children[1].style.display = "none"
+		switchAdd[0].parentElement.children[0].style.display = "block"
+	}
+})
 
 Array.from(input).forEach(element=>{
 	element.addEventListener("input", ()=>{

@@ -596,6 +596,15 @@ textarea:focus, input:focus, select:focus {
 	display: block;
 }
 
+.option__item .switch--shadow + .label-switch::after{
+	height: 24px;
+	width: 24px;
+}
+
+.option__item .switch--shadow + .label-switch{
+	width: 36px;
+}
+
 /* menu-------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .gray-mask {
