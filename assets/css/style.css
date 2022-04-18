@@ -514,6 +514,7 @@ a{
 	width: 5px;
 	border-radius: 50%;
 	background-color: #292F31;
+	z-index: -100;
 }
 
 .cancel{
@@ -592,6 +593,10 @@ textarea:focus, input:focus, select:focus {
 
 .option__item:hover .option__img{
 	filter: invert(57%) sepia(98%) saturate(784%) hue-rotate(115deg) brightness(90%) contrast(96%);
+}
+
+.option__item:hover{
+	cursor: pointer;
 }
 
 .options__switch{
