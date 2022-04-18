@@ -1365,7 +1365,7 @@ textarea:focus, input:focus, select:focus {
 	}
 
 	.options{
-		right: -12px;
+		right: -1px;
 	}
 
 	.option__last{

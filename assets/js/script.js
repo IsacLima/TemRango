@@ -17,6 +17,8 @@ const save = document.getElementsByClassName('save')
 const addDist = document.getElementsByClassName('add-dist')
 const input = document.getElementsByClassName('input')
 const switchAdd = document.getElementsByClassName('switch__add')
+const add = document.getElementsByClassName('add-item')
+const optionItem = document.getElementsByClassName('option__item')
 let options = document.getElementsByClassName('options')
 let moreOptions = document.getElementsByClassName('circles')
 let current = [btn[0].parentElement.classList]
@@ -26,6 +28,14 @@ let cont = 4
 let active = false
 let switList = [false, false]
 let inputList = [false, false]
+var remove
+
+
+optionItem[1].addEventListener("click", ()=>{
+	console.log(remove, tipSelection)
+	tipSelection[0].children[1].removeChild(remove)
+	options[0].style.display = "none"
+})
 
 Array.from(moreOptions).forEach(item=>{
 	attArray(item)	
@@ -33,7 +43,23 @@ Array.from(moreOptions).forEach(item=>{
 
 function attArray(ent){
 	ent.addEventListener("click", ()=>{
-		let top = event.pageY - 610
+		
+		if(event.target == "circle"){
+			remove = event.target.parentElement.parentElement
+		}
+		else{
+			remove = event.target.parentElement
+		}
+		let test = checkDevice()
+		if(test == true){
+			var top = event.pageY - 610
+		}
+		else{
+			console.log(event.pageY - 475)
+			var top = event.pageY - 475
+			console.log(top)
+		}
+		console.log(top, event.pageY)
 		options[0].style.top = `${top}px`
 		if(options[0].style.display == "block"){
 			options[0].style.display = "none"
