@@ -121,7 +121,7 @@ button{
 	display: none;
 	height: 312px;
 	width: 293.1px;
-	margin: 49px 16px;
+	margin-top: 49px;
 	padding: 0 17px 0 17.9px;
 	border-radius: 15px;
 	background-color: #FFF;
@@ -209,7 +209,7 @@ strong{
 .tip__one-time{
 	display: none;
 	height: 573px;
-	width: 296px;
+	width: 290px;
 	padding: 0 19px;
 	position: absolute;
 	z-index: 2000;
@@ -396,7 +396,7 @@ strong{
 .tip__district{
 	display: none;
 	height: auto;
-	width: 296px;
+	width: 290px;
 	padding: 0 19px;
 	position: absolute;
 	z-index: 2000;
@@ -530,7 +530,7 @@ textarea:focus, input:focus, select:focus {
 .tip__km{
 	display: none;
 	height: auto;
-	width: 296px;
+	width: 290px;
 	padding: 0 19px;
 	position: absolute;
 	z-index: 2000;
