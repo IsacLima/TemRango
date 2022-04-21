@@ -1,0 +1,5 @@
+<svg id="tiket" xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16">
+  <rect id="bg" width="18" height="16" rx="3" fill="#64bc0d"/>
+  <rect id="Retângulo_351" data-name="Retângulo 351" width="8" height="2.5" rx="1.25" transform="translate(3 9)" fill="#fff"/>
+  <rect id="Retângulo_350" data-name="Retângulo 350" width="12" height="2.5" rx="1.25" transform="translate(3 4)" fill="#fff"/>
+</svg>
