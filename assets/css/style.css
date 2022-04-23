@@ -91,7 +91,7 @@
 .menu__header__icon{
 	height: 16.5px;
 	width: 22.6px;
-	margin-left: 15px;
+	margin-left: 16px;
 	margin-right: 11.42px;
 	margin-top: 40px;
 }
@@ -309,6 +309,17 @@
 	display: none;
 }
 
+nav{
+	width: 100%;
+	margin-top: 40px;
+	display: grid;
+}
+
+.nav__icon{
+	justify-self: start;
+}
+
+
 @media (min-width:1250px){
 	.menu--short{
 		display: none;
@@ -318,6 +329,10 @@
 		display: grid;
 		grid-template-areas: 'menu corpo';
 		grid-template-columns: 72px calc(100% - 72px);
+	}
+
+	nav{
+		display: none;
 	}
 
 	.menu--short{
