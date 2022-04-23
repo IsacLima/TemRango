@@ -7,8 +7,9 @@ const mask = document.getElementsByClassName("gray-mask")
 const container = document.getElementsByClassName('container')
 const content = document.getElementsByClassName('content')
 const menu_icon = document.getElementsByClassName('nav__icon')
-let left = content[0].getBoundingClientRect().x
-
+// let left = content[0].getBoundingClientRect().x
+// variaveis do menu, left é responsavel por manter a distancia do conteudo principal responsivo, só tem que colocar 
+// como class name 'content' na main
 
 Array.from(itemsmenu).forEach(item=>{
 	tips = tips = document.getElementsByClassName("tooltips")
