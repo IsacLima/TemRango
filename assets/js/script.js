@@ -7,6 +7,7 @@ const mask = document.getElementsByClassName("gray-mask")
 const container = document.getElementsByClassName('container')
 const content = document.getElementsByClassName('content')
 const menu_icon = document.getElementsByClassName('nav__icon')
+let left = content[0].getBoundingClientRect().x
 
 
 Array.from(itemsmenu).forEach(item=>{
