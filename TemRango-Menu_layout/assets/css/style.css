@@ -312,11 +312,14 @@
 nav{
 	width: 100%;
 	margin-top: 40px;
-	display: grid;
+	display: flex;
 }
 
-.nav__icon{
-	justify-self: start;
+.nav__text{
+	margin-left: 59.42px;
+	font-size: 13px;
+	font-weight: 400;
+	color: #808285;
 }
 
 
@@ -585,4 +588,6 @@ nav{
 		cursor: pointer;
 		color: #05CB95;
 	}
+
+	
 }
